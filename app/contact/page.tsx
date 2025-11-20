@@ -25,67 +25,164 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div style={{ minHeight: '100vh', backgroundColor: '#ffffff' }}>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#06316D] to-[#09BEFC] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-4">Get In Touch</h1>
-          <p className="text-xl text-white/90">
+      <section style={{ 
+        background: 'linear-gradient(to bottom right, #06316D, #09BEFC)', 
+        color: '#ffffff', 
+        paddingTop: '5rem', 
+        paddingBottom: '5rem' 
+      }}>
+        <div style={{ 
+          maxWidth: '80rem', 
+          marginLeft: 'auto', 
+          marginRight: 'auto', 
+          paddingLeft: '1rem', 
+          paddingRight: '1rem', 
+          textAlign: 'center' 
+        }}>
+          <h1 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem' }}>
+            Get In Touch
+          </h1>
+          <p style={{ fontSize: '1.25rem', opacity: 0.9 }}>
             Ready to transform your business with AI-powered solutions? Let's talk.
           </p>
         </div>
       </section>
 
       {/* Spacing */}
-      <div className="h-16 bg-white"></div>
+      <div style={{ height: '4rem', backgroundColor: '#ffffff' }}></div>
 
       {/* Contact Cards Section */}
-      <section className="py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <section style={{ paddingTop: '2rem', paddingBottom: '2rem', backgroundColor: '#ffffff' }}>
+        <div style={{ 
+          maxWidth: '80rem', 
+          marginLeft: 'auto', 
+          marginRight: 'auto', 
+          paddingLeft: '1rem', 
+          paddingRight: '1rem' 
+        }}>
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+            gap: '2rem',
+            maxWidth: '72rem',
+            marginLeft: 'auto',
+            marginRight: 'auto'
+          }}>
             {/* Schedule a Call Card */}
-            <div className="bg-white rounded-lg shadow-md p-8 text-center flex flex-col">
-              <div className="text-6xl mb-6">📅</div>
-              <h3 className="text-xl font-bold text-[#06316D] mb-4">Schedule a Call</h3>
-              <p className="text-gray-600 mb-6 flex-grow">
+            <div style={{ 
+              backgroundColor: '#ffffff', 
+              borderRadius: '0.5rem', 
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', 
+              padding: '2rem', 
+              textAlign: 'center',
+              display: 'flex',
+              flexDirection: 'column'
+            }}>
+              <div style={{ fontSize: '3.75rem', marginBottom: '1.5rem' }}>📅</div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#06316D', marginBottom: '1rem' }}>
+                Schedule a Call
+              </h3>
+              <p style={{ color: '#4b5563', marginBottom: '1.5rem', flexGrow: 1 }}>
                 Book a complimentary 30-minute strategy session to discuss your goals.
               </p>
               <a
                 href="https://calendly.com/atlasaimarketing-info/30min"
-                style={{ backgroundColor: '#06316D', color: '#ffffff' }}
-                className="inline-block px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity"
+                style={{ 
+                  display: 'inline-block',
+                  backgroundColor: '#06316D', 
+                  color: '#ffffff', 
+                  paddingLeft: '2rem', 
+                  paddingRight: '2rem', 
+                  paddingTop: '0.75rem', 
+                  paddingBottom: '0.75rem', 
+                  borderRadius: '0.375rem', 
+                  fontWeight: '600',
+                  textDecoration: 'none',
+                  transition: 'opacity 0.2s'
+                }}
+                onMouseOver={(e ) => e.currentTarget.style.opacity = '0.9'}
+                onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
               >
                 Book Now
               </a>
             </div>
 
             {/* Email Us Card */}
-            <div className="bg-white rounded-lg shadow-md p-8 text-center flex flex-col">
-              <div className="text-6xl mb-6">✉️</div>
-              <h3 className="text-xl font-bold text-[#06316D] mb-4">Email Us</h3>
-              <p className="text-gray-600 mb-6 flex-grow">
+            <div style={{ 
+              backgroundColor: '#ffffff', 
+              borderRadius: '0.5rem', 
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', 
+              padding: '2rem', 
+              textAlign: 'center',
+              display: 'flex',
+              flexDirection: 'column'
+            }}>
+              <div style={{ fontSize: '3.75rem', marginBottom: '1.5rem' }}>✉️</div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#06316D', marginBottom: '1rem' }}>
+                Email Us
+              </h3>
+              <p style={{ color: '#4b5563', marginBottom: '1.5rem', flexGrow: 1 }}>
                 Send us an email and we'll get back to you within 24 hours.
               </p>
               <a
                 href="mailto:info@atlasaimarketing.co"
-                style={{ backgroundColor: '#06316D', color: '#ffffff' }}
-                className="inline-block px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity break-all"
+                style={{ 
+                  display: 'inline-block',
+                  backgroundColor: '#06316D', 
+                  color: '#ffffff', 
+                  paddingLeft: '2rem', 
+                  paddingRight: '2rem', 
+                  paddingTop: '0.75rem', 
+                  paddingBottom: '0.75rem', 
+                  borderRadius: '0.375rem', 
+                  fontWeight: '600',
+                  textDecoration: 'none',
+                  wordBreak: 'break-all',
+                  transition: 'opacity 0.2s'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.opacity = '0.9'}
+                onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
               >
                 info@atlasaimarketing.co
               </a>
             </div>
 
             {/* Call Us Card */}
-            <div className="bg-white rounded-lg shadow-md p-8 text-center flex flex-col">
-              <div className="text-6xl mb-6">📞</div>
-              <h3 className="text-xl font-bold text-[#06316D] mb-4">Call Us</h3>
-              <p className="text-gray-600 mb-6 flex-grow">
+            <div style={{ 
+              backgroundColor: '#ffffff', 
+              borderRadius: '0.5rem', 
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)', 
+              padding: '2rem', 
+              textAlign: 'center',
+              display: 'flex',
+              flexDirection: 'column'
+            }}>
+              <div style={{ fontSize: '3.75rem', marginBottom: '1.5rem' }}>📞</div>
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#06316D', marginBottom: '1rem' }}>
+                Call Us
+              </h3>
+              <p style={{ color: '#4b5563', marginBottom: '1.5rem', flexGrow: 1 }}>
                 Prefer to talk? Give us a call during business hours.
               </p>
               <a
                 href="tel:832-583-9000"
-                style={{ backgroundColor: '#06316D', color: '#ffffff' }}
-                className="inline-block px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity"
+                style={{ 
+                  display: 'inline-block',
+                  backgroundColor: '#06316D', 
+                  color: '#ffffff', 
+                  paddingLeft: '2rem', 
+                  paddingRight: '2rem', 
+                  paddingTop: '0.75rem', 
+                  paddingBottom: '0.75rem', 
+                  borderRadius: '0.375rem', 
+                  fontWeight: '600',
+                  textDecoration: 'none',
+                  transition: 'opacity 0.2s'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.opacity = '0.9'}
+                onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
               >
                 832-583-9000
               </a>
@@ -95,38 +192,61 @@ export default function ContactPage() {
       </section>
 
       {/* Spacing */}
-      <div className="h-16 bg-white"></div>
+      <div style={{ height: '4rem', backgroundColor: '#ffffff' }}></div>
 
       {/* Contact Form Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto bg-gray-50 rounded-lg shadow-lg p-8 md:p-12">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold text-[#06316D] mb-4">Send Us a Message</h2>
-              <p className="text-gray-600">
+      <section style={{ paddingTop: '4rem', paddingBottom: '4rem', backgroundColor: '#ffffff' }}>
+        <div style={{ 
+          maxWidth: '80rem', 
+          marginLeft: 'auto', 
+          marginRight: 'auto', 
+          paddingLeft: '1rem', 
+          paddingRight: '1rem' 
+        }}>
+          <div style={{ 
+            maxWidth: '56rem', 
+            marginLeft: 'auto', 
+            marginRight: 'auto', 
+            backgroundColor: '#f9fafb', 
+            borderRadius: '0.5rem', 
+            boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1)', 
+            padding: '3rem' 
+          }}>
+            <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+              <h2 style={{ fontSize: '1.875rem', fontWeight: 'bold', color: '#06316D', marginBottom: '1rem' }}>
+                Send Us a Message
+              </h2>
+              <p style={{ color: '#4b5563' }}>
                 Fill out the form below and we'll get back to you as soon as possible.
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               {/* Name and Email */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
                 <div>
-                  <label htmlFor="name" className="block text-[#06316D] font-semibold mb-2">
+                  <label htmlFor="name" style={{ display: 'block', color: '#06316D', fontWeight: '600', marginBottom: '0.5rem' }}>
                     Name *
                   </label>
                   <input
                     id="name"
                     type="text"
                     value={formData.name}
-                    onChange={(e ) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none bg-white"
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    style={{ 
+                      width: '100%', 
+                      padding: '0.75rem 1rem', 
+                      border: '1px solid #d1d5db', 
+                      borderRadius: '0.375rem', 
+                      backgroundColor: '#ffffff',
+                      fontSize: '1rem'
+                    }}
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-[#06316D] font-semibold mb-2">
+                  <label htmlFor="email" style={{ display: 'block', color: '#06316D', fontWeight: '600', marginBottom: '0.5rem' }}>
                     Email *
                   </label>
                   <input
@@ -134,16 +254,23 @@ export default function ContactPage() {
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none bg-white"
+                    style={{ 
+                      width: '100%', 
+                      padding: '0.75rem 1rem', 
+                      border: '1px solid #d1d5db', 
+                      borderRadius: '0.375rem', 
+                      backgroundColor: '#ffffff',
+                      fontSize: '1rem'
+                    }}
                     required
                   />
                 </div>
               </div>
 
               {/* Phone and Company */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
                 <div>
-                  <label htmlFor="phone" className="block text-[#06316D] font-semibold mb-2">
+                  <label htmlFor="phone" style={{ display: 'block', color: '#06316D', fontWeight: '600', marginBottom: '0.5rem' }}>
                     Phone *
                   </label>
                   <input
@@ -151,13 +278,20 @@ export default function ContactPage() {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none bg-white"
+                    style={{ 
+                      width: '100%', 
+                      padding: '0.75rem 1rem', 
+                      border: '1px solid #d1d5db', 
+                      borderRadius: '0.375rem', 
+                      backgroundColor: '#ffffff',
+                      fontSize: '1rem'
+                    }}
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="company" className="block text-[#06316D] font-semibold mb-2">
+                  <label htmlFor="company" style={{ display: 'block', color: '#06316D', fontWeight: '600', marginBottom: '0.5rem' }}>
                     Company
                   </label>
                   <input
@@ -165,14 +299,21 @@ export default function ContactPage() {
                     type="text"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none bg-white"
+                    style={{ 
+                      width: '100%', 
+                      padding: '0.75rem 1rem', 
+                      border: '1px solid #d1d5db', 
+                      borderRadius: '0.375rem', 
+                      backgroundColor: '#ffffff',
+                      fontSize: '1rem'
+                    }}
                   />
                 </div>
               </div>
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-[#06316D] font-semibold mb-2">
+                <label htmlFor="message" style={{ display: 'block', color: '#06316D', fontWeight: '600', marginBottom: '0.5rem' }}>
                   Message *
                 </label>
                 <textarea
@@ -180,23 +321,44 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none bg-white resize-none"
+                  style={{ 
+                    width: '100%', 
+                    padding: '0.75rem 1rem', 
+                    border: '1px solid #d1d5db', 
+                    borderRadius: '0.375rem', 
+                    backgroundColor: '#ffffff',
+                    fontSize: '1rem',
+                    resize: 'none'
+                  }}
                   required
                 />
               </div>
 
               {/* SMS Consent Checkbox */}
-              <div className="flex items-start space-x-3 p-4 bg-white rounded-md border border-gray-300">
+              <div style={{ 
+                display: 'flex', 
+                alignItems: 'flex-start', 
+                gap: '0.75rem', 
+                padding: '1rem', 
+                backgroundColor: '#ffffff', 
+                borderRadius: '0.375rem', 
+                border: '1px solid #d1d5db' 
+              }}>
                 <input
                   id="smsConsent"
                   type="checkbox"
                   checked={formData.smsConsent}
                   onChange={(e) => setFormData({ ...formData, smsConsent: e.target.checked })}
-                  className="mt-1 h-4 w-4 text-[#09BEFC] border-gray-300 rounded focus:ring-[#09BEFC] flex-shrink-0"
+                  style={{ 
+                    marginTop: '0.25rem', 
+                    height: '1rem', 
+                    width: '1rem', 
+                    flexShrink: 0 
+                  }}
                 />
-                <label htmlFor="smsConsent" className="text-sm text-gray-700 leading-relaxed cursor-pointer">
+                <label htmlFor="smsConsent" style={{ fontSize: '0.875rem', color: '#374151', lineHeight: '1.5', cursor: 'pointer' }}>
                   By providing your phone number and checking this box, you consent to receive text messages from Atlas AI Growth & Marketing Agency regarding your inquiry, appointment confirmations, etc. Message frequency may vary. Message and data rates may apply. For assistance, reply HELP or contact 832-583-9000. To stop receiving messages, reply STOP. No further messages will be sent. For details, see our{" "}
-                  <Link href="/privacy" className="text-[#09BEFC] hover:underline font-medium">
+                  <Link href="/privacy" style={{ color: '#09BEFC', fontWeight: '500', textDecoration: 'none' }}>
                     Privacy Policy
                   </Link>
                   .
@@ -206,8 +368,21 @@ export default function ContactPage() {
               {/* Submit Button */}
               <button
                 type="submit"
-                style={{ backgroundColor: '#06316D', color: '#ffffff' }}
-                className="w-full px-8 py-4 rounded-md font-bold text-lg hover:opacity-90 transition-opacity"
+                style={{ 
+                  width: '100%', 
+                  backgroundColor: '#06316D', 
+                  color: '#ffffff', 
+                  paddingTop: '1rem', 
+                  paddingBottom: '1rem', 
+                  borderRadius: '0.375rem', 
+                  fontWeight: 'bold', 
+                  fontSize: '1.125rem',
+                  border: 'none',
+                  cursor: 'pointer',
+                  transition: 'opacity 0.2s'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.opacity = '0.9'}
+                onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
               >
                 Send Message
               </button>
