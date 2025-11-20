@@ -36,8 +36,8 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ADDED SPACING */}
-      <div className="h-16"></div>
+      {/* Spacing */}
+      <div className="h-16 bg-white"></div>
 
       {/* Contact Cards Section */}
       <section className="py-8 bg-white">
@@ -52,7 +52,8 @@ export default function ContactPage() {
               </p>
               <a
                 href="https://calendly.com/atlasaimarketing-info/30min"
-                className="inline-block bg-[#09BEFC] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#08a8e0] transition-colors"
+                style={{ backgroundColor: '#06316D', color: '#ffffff' }}
+                className="inline-block px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity"
               >
                 Book Now
               </a>
@@ -67,7 +68,8 @@ export default function ContactPage() {
               </p>
               <a
                 href="mailto:info@atlasaimarketing.co"
-                className="inline-block bg-[#06316D] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#052654] transition-colors break-all"
+                style={{ backgroundColor: '#06316D', color: '#ffffff' }}
+                className="inline-block px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity break-all"
               >
                 info@atlasaimarketing.co
               </a>
@@ -82,7 +84,8 @@ export default function ContactPage() {
               </p>
               <a
                 href="tel:832-583-9000"
-                className="inline-block bg-[#06316D] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#052654] transition-colors"
+                style={{ backgroundColor: '#06316D', color: '#ffffff' }}
+                className="inline-block px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity"
               >
                 832-583-9000
               </a>
@@ -91,14 +94,13 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ADDED SPACING */}
-      <div className="h-16"></div>
+      {/* Spacing */}
+      <div className="h-16 bg-white"></div>
 
-      {/* Contact Form Section - PROPERLY CENTERED */}
+      {/* Contact Form Section - CENTERED */}
       <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4">
-          {/* Gray Card Container - THIS CENTERS THE FORM */}
-          <div className="bg-gray-50 rounded-lg shadow-lg p-8 md:p-12">
+        <div className="w-full flex justify-center px-4">
+          <div className="w-full max-w-4xl bg-gray-50 rounded-lg shadow-lg p-8 md:p-12">
             <div className="text-center mb-10">
               <h2 className="text-3xl font-bold text-[#06316D] mb-4">Send Us a Message</h2>
               <p className="text-gray-600">
@@ -178,7 +180,7 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none bg-white"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none bg-white resize-none"
                   required
                 />
               </div>
@@ -190,7 +192,7 @@ export default function ContactPage() {
                   type="checkbox"
                   checked={formData.smsConsent}
                   onChange={(e) => setFormData({ ...formData, smsConsent: e.target.checked })}
-                  className="mt-1 h-4 w-4 text-[#09BEFC] border-gray-300 rounded focus:ring-[#09BEFC]"
+                  className="mt-1 h-4 w-4 text-[#09BEFC] border-gray-300 rounded focus:ring-[#09BEFC] flex-shrink-0"
                 />
                 <label htmlFor="smsConsent" className="text-sm text-gray-700 leading-relaxed cursor-pointer">
                   By providing your phone number and checking this box, you consent to receive text messages from Atlas AI Growth & Marketing Agency regarding your inquiry, appointment confirmations, etc. Message frequency may vary. Message and data rates may apply. For assistance, reply HELP or contact 832-583-9000. To stop receiving messages, reply STOP. No further messages will be sent. For details, see our{" "}
@@ -204,7 +206,8 @@ export default function ContactPage() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-[#09BEFC] hover:bg-[#08a8e0] text-white font-bold text-lg py-4 rounded-md transition-colors"
+                style={{ backgroundColor: '#06316D', color: '#ffffff' }}
+                className="w-full px-8 py-4 rounded-md font-bold text-lg hover:opacity-90 transition-opacity"
               >
                 Send Message
               </button>
