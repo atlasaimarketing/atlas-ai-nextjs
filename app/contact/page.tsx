@@ -36,15 +36,18 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* ADDED SPACING */}
+      <div className="h-16"></div>
+
       {/* Contact Cards Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
             {/* Schedule a Call Card */}
-            <div className="bg-white rounded-lg shadow-md p-8 text-center">
+            <div className="bg-white rounded-lg shadow-md p-8 text-center flex flex-col">
               <div className="text-6xl mb-6">📅</div>
               <h3 className="text-xl font-bold text-[#06316D] mb-4">Schedule a Call</h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-6 flex-grow">
                 Book a complimentary 30-minute strategy session to discuss your goals.
               </p>
               <a
@@ -56,25 +59,25 @@ export default function ContactPage() {
             </div>
 
             {/* Email Us Card */}
-            <div className="bg-white rounded-lg shadow-md p-8 text-center">
+            <div className="bg-white rounded-lg shadow-md p-8 text-center flex flex-col">
               <div className="text-6xl mb-6">✉️</div>
               <h3 className="text-xl font-bold text-[#06316D] mb-4">Email Us</h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-6 flex-grow">
                 Send us an email and we'll get back to you within 24 hours.
               </p>
               <a
                 href="mailto:info@atlasaimarketing.co"
-                className="inline-block bg-[#06316D] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#052654] transition-colors"
+                className="inline-block bg-[#06316D] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#052654] transition-colors break-all"
               >
                 info@atlasaimarketing.co
               </a>
             </div>
 
             {/* Call Us Card */}
-            <div className="bg-white rounded-lg shadow-md p-8 text-center">
+            <div className="bg-white rounded-lg shadow-md p-8 text-center flex flex-col">
               <div className="text-6xl mb-6">📞</div>
               <h3 className="text-xl font-bold text-[#06316D] mb-4">Call Us</h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-6 flex-grow">
                 Prefer to talk? Give us a call during business hours.
               </p>
               <a
@@ -88,10 +91,14 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* ADDED SPACING */}
+      <div className="h-16"></div>
+
       {/* Contact Form Section - PROPERLY CENTERED */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="max-w-4xl mx-auto bg-gray-50 rounded-lg p-12">
+        <div className="max-w-5xl mx-auto px-4">
+          {/* Gray Card Container - THIS CENTERS THE FORM */}
+          <div className="bg-gray-50 rounded-lg shadow-lg p-8 md:p-12">
             <div className="text-center mb-10">
               <h2 className="text-3xl font-bold text-[#06316D] mb-4">Send Us a Message</h2>
               <p className="text-gray-600">
@@ -111,7 +118,7 @@ export default function ContactPage() {
                     type="text"
                     value={formData.name}
                     onChange={(e ) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none bg-white"
                     required
                   />
                 </div>
@@ -125,7 +132,7 @@ export default function ContactPage() {
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none bg-white"
                     required
                   />
                 </div>
@@ -142,7 +149,7 @@ export default function ContactPage() {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none bg-white"
                     required
                   />
                 </div>
@@ -156,7 +163,7 @@ export default function ContactPage() {
                     type="text"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none bg-white"
                   />
                 </div>
               </div>
@@ -171,13 +178,13 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows={5}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09BEFC] focus:outline-none bg-white"
                   required
                 />
               </div>
 
               {/* SMS Consent Checkbox */}
-              <div className="flex items-start space-x-3 p-4 bg-gray-100 rounded-md border border-gray-200">
+              <div className="flex items-start space-x-3 p-4 bg-white rounded-md border border-gray-300">
                 <input
                   id="smsConsent"
                   type="checkbox"
@@ -197,7 +204,7 @@ export default function ContactPage() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-[#09BEFC] hover:bg-[#08a8e0] text-white font-semibold text-lg py-6 rounded-md transition-colors"
+                className="w-full bg-[#09BEFC] hover:bg-[#08a8e0] text-white font-bold text-lg py-4 rounded-md transition-colors"
               >
                 Send Message
               </button>
