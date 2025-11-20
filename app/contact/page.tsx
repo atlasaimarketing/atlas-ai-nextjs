@@ -28,7 +28,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#06316D] to-[#09BEFC] text-white py-20">
-        <div className="container mx-auto px-4 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-4">Get In Touch</h1>
           <p className="text-xl text-white/90">
             Ready to transform your business with AI-powered solutions? Let's talk.
@@ -39,9 +39,9 @@ export default function ContactPage() {
       {/* Spacing */}
       <div className="h-16 bg-white"></div>
 
-      {/* Contact Cards Section - CENTERED */}
+      {/* Contact Cards Section */}
       <section className="py-8 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Schedule a Call Card */}
             <div className="bg-white rounded-lg shadow-md p-8 text-center flex flex-col">
@@ -97,9 +97,9 @@ export default function ContactPage() {
       {/* Spacing */}
       <div className="h-16 bg-white"></div>
 
-      {/* Contact Form Section - CENTERED */}
+      {/* Contact Form Section */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto bg-gray-50 rounded-lg shadow-lg p-8 md:p-12">
             <div className="text-center mb-10">
               <h2 className="text-3xl font-bold text-[#06316D] mb-4">Send Us a Message</h2>
