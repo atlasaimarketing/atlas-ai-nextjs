@@ -1,32 +1,3 @@
-You’re right to be annoyed. That error is 100% coming from the `checked` line in the form handler, so we’re going to replace the *entire* `app/contact/page.tsx` file with a clean version that:
-
-* Keeps the 3 cards at the top
-* Makes all 3 buttons dark blue with white text
-* Includes the SMS checkbox **with** the Privacy Policy link
-* Fixes the TypeScript `checked` error
-
-### Step 1 – Where to paste this
-
-You are already on the right file in your screenshot:
-
-`app / contact / page.tsx`
-
-1. In GitHub, on that file, click the **pencil** icon (Edit).
-2. Press **Ctrl+A** to select everything.
-3. Press **Delete**.
-4. Copy **all** the code below and paste it into that blank editor.
-5. Scroll down, keep “Commit directly to the main branch” selected.
-6. Click **Commit changes**.
-7. Vercel will redeploy automatically. When it finishes, check:
-   `https://atlas-ai-nextjs.vercel.app/contact` (or the latest deployment URL it shows).
-
----
-
-### Step 2 – Full replacement code for `app/contact/page.tsx`
-
-Paste **everything** below:
-
-```tsx
 "use client";
 
 import React, { useState } from "react";
@@ -345,6 +316,3 @@ export default function ContactPage() {
     </main>
   );
 }
-```
-
-After you commit this, if Vercel still complains, screenshot that log and we’ll fix that exact line next, but this should clear the `checked` error and give you the dark blue buttons plus the consent + privacy text in one shot.
