@@ -65,25 +65,27 @@ export default function QAPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
+      {/* Hero Section - EXACT match to Services page structure */}
       <section className="py-20 bg-gradient-to-br from-[#06316D] via-[#04254f] to-[#021633] text-white">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            This page covers the most common questions businesses ask about Atlas AI
-            and how our solutions work. The goal is to provide clear information about
-            our services, structure, and approach. If you are exploring AI driven
-            marketing, branding, automation, or system support for your company, the
-            answers below will help you understand what to expect.
-          </p>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 2rem" }}>
+          <div className="text-center">
+            <h1 style={{ fontSize: "3.5rem", fontWeight: "bold", marginBottom: "1.5rem" }}>
+              Frequently Asked Questions
+            </h1>
+            <p style={{ fontSize: "1.25rem", opacity: 0.9, maxWidth: "800px", margin: "0 auto" }}>
+              This page covers the most common questions businesses ask about Atlas AI
+              and how our solutions work. The goal is to provide clear information about
+              our services, structure, and approach. If you are exploring AI driven
+              marketing, branding, automation, or system support for your company, the
+              answers below will help you understand what to expect.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section - EXACT match to Services page container */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
+        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 2rem" }}>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div
@@ -129,33 +131,35 @@ export default function QAPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - EXACT match to Services page structure */}
       <section className="py-20 bg-gradient-to-br from-[#06316D] via-[#04254f] to-[#021633] text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Still Have Questions?
-          </h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            If you have additional questions or would like to explore how Atlas AI can
-            support your business, you can schedule a discovery call. You can also
-            review the Services page to learn more about brand systems, SEO support,
-            automation workflows, and AI driven marketing solutions.
-          </p>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 2rem" }}>
+          <div className="text-center">
+            <h2 style={{ fontSize: "2.5rem", fontWeight: "bold", marginBottom: "1.5rem" }}>
+              Still Have Questions?
+            </h2>
+            <p style={{ fontSize: "1.25rem", opacity: 0.9, maxWidth: "700px", margin: "0 auto 2rem" }}>
+              If you have additional questions or would like to explore how Atlas AI can
+              support your business, you can schedule a discovery call. You can also
+              review the Services page to learn more about brand systems, SEO support,
+              automation workflows, and AI driven marketing solutions.
+            </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/contact"
-              className="inline-block bg-[#09BEFC] text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-[#08a8e0] transition-colors shadow-lg w-full sm:w-auto text-center"
-            >
-              Schedule a Discovery Call
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                href="/contact"
+                className="inline-block bg-[#09BEFC] text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-[#08a8e0] transition-colors shadow-lg w-full sm:w-auto text-center"
+              >
+                Schedule a Discovery Call
+              </Link>
 
-            <Link
-              href="/services"
-              className="inline-block bg-white text-[#06316D] px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg border-2 border-white w-full sm:w-auto text-center"
-            >
-              View Services
-            </Link>
+              <Link
+                href="/services"
+                className="inline-block bg-white text-[#06316D] px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg border-2 border-white w-full sm:w-auto text-center"
+              >
+                View Services
+              </Link>
+            </div>
           </div>
         </div>
       </section>
