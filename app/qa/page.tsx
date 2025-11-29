@@ -67,7 +67,7 @@ export default function QAPage() {
     <div className="min-h-screen bg-white">
       {/* Hero Section - Matches Services Page */}
       <section className="bg-gradient-to-br from-[#06316D] via-[#04254f] to-[#021633] text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Frequently Asked Questions
           </h1>
@@ -83,8 +83,8 @@ export default function QAPage() {
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-4">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -131,7 +131,7 @@ export default function QAPage() {
 
       {/* CTA Section - Matches Services Page Style */}
       <section className="py-20 bg-gradient-to-br from-[#06316D] via-[#04254f] to-[#021633] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Still Have Questions?
           </h2>
@@ -142,17 +142,17 @@ export default function QAPage() {
             automation workflows, and AI driven marketing solutions.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
             <Link
               href="/contact"
-              className="inline-block bg-[#09BEFC] text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-[#08a8e0] transition-colors shadow-lg"
+              className="inline-block bg-[#09BEFC] text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-[#08a8e0] transition-colors shadow-lg w-full sm:w-auto text-center"
             >
               Schedule a Discovery Call
             </Link>
 
             <Link
               href="/services"
-              className="inline-block bg-white text-[#06316D] px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+              className="inline-block bg-white text-[#06316D] px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg border-2 border-white w-full sm:w-auto text-center"
             >
               View Services
             </Link>
