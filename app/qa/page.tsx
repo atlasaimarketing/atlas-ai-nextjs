@@ -54,7 +54,6 @@ export default function QA() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // SEO: Update page title and meta description
   useEffect(() => {
     document.title = "FAQ - Atlas AI | Frequently Asked Questions";
     
@@ -71,7 +70,6 @@ export default function QA() {
 
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#ffffff' }}>
-      {/* Hero Section */}
       <section style={{ 
         background: 'linear-gradient(to bottom right, #06316D, #09BEFC)', 
         color: '#ffffff', 
@@ -95,10 +93,8 @@ export default function QA() {
         </div>
       </section>
 
-      {/* Spacing */}
       <div style={{ height: '4rem' }}></div>
 
-      {/* FAQ Section */}
       <section style={{ paddingBottom: '4rem', backgroundColor: '#ffffff' }}>
         <div style={{ 
           maxWidth: '56rem', 
@@ -179,10 +175,8 @@ export default function QA() {
         </div>
       </section>
 
-      {/* Spacing */}
       <div style={{ height: '2rem' }}></div>
 
-      {/* CTA Section */}
       <section style={{ paddingTop: '4rem', paddingBottom: '4rem', backgroundColor: '#f9fafb' }}>
         <div style={{ 
           maxWidth: '48rem', 
@@ -217,8 +211,6 @@ export default function QA() {
                 transition: 'opacity 0.2s',
                 boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
-              onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
             >
               Schedule a Discovery Call
             </Link>
@@ -241,8 +233,6 @@ export default function QA() {
                 border: '2px solid #06316D',
                 boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f9fafb'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
             >
               View Services
             </Link>
