@@ -65,14 +65,36 @@ export default function QAPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - EXACT match to Services page structure */}
-      <section className="py-20 bg-gradient-to-br from-[#06316D] via-[#04254f] to-[#021633] text-white">
+      {/* Hero Section - Matches Contact page gradient */}
+      <section
+        style={{
+          background: "linear-gradient(to right bottom, rgb(6, 49, 109), rgb(9, 190, 252))",
+          paddingTop: "80px",
+          paddingBottom: "80px",
+          color: "#ffffff",
+        }}
+      >
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 2rem" }}>
-          <div className="text-center">
-            <h1 style={{ fontSize: "3.5rem", fontWeight: "bold", marginBottom: "1.5rem" }}>
+          <div style={{ textAlign: "center" }}>
+            <h1
+              style={{
+                fontSize: "3.5rem",
+                fontWeight: "bold",
+                marginBottom: "1.5rem",
+                lineHeight: "1.2",
+              }}
+            >
               Frequently Asked Questions
             </h1>
-            <p style={{ fontSize: "1.25rem", opacity: 0.9, maxWidth: "800px", margin: "0 auto" }}>
+            <p
+              style={{
+                fontSize: "1.25rem",
+                opacity: 0.9,
+                maxWidth: "800px",
+                margin: "0 auto",
+                lineHeight: "1.6",
+              }}
+            >
               This page covers the most common questions businesses ask about Atlas AI
               and how our solutions work. The goal is to provide clear information about
               our services, structure, and approach. If you are exploring AI driven
@@ -83,26 +105,58 @@ export default function QAPage() {
         </div>
       </section>
 
-      {/* FAQ Section - EXACT match to Services page container */}
-      <section className="py-20 bg-white">
+      {/* FAQ Section - Matches Services page container */}
+      <section style={{ paddingTop: "80px", paddingBottom: "80px", backgroundColor: "#ffffff" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 2rem" }}>
-          <div className="space-y-4">
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-200"
+                style={{
+                  backgroundColor: "#ffffff",
+                  borderRadius: "12px",
+                  border: "1px solid #E5E7EB",
+                  overflow: "hidden",
+                  boxShadow: openIndex === index ? "0 10px 30px rgba(0,0,0,0.1)" : "none",
+                  transition: "box-shadow 0.2s",
+                }}
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full text-left p-6 flex justify-between items-center gap-6 hover:bg-gray-50 transition-colors"
+                  style={{
+                    width: "100%",
+                    textAlign: "left",
+                    padding: "1.5rem 2rem",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    gap: "1.5rem",
+                    backgroundColor: openIndex === index ? "#F9FAFB" : "#ffffff",
+                    border: "none",
+                    cursor: "pointer",
+                    transition: "background-color 0.2s",
+                  }}
                 >
-                  <span className="text-lg font-semibold text-[#06316D] leading-relaxed flex-1">
+                  <span
+                    style={{
+                      fontSize: "1.25rem",
+                      fontWeight: "600",
+                      color: "#06316D",
+                      lineHeight: "1.6",
+                      flex: 1,
+                    }}
+                  >
                     {faq.question}
                   </span>
                   <svg
-                    className={`w-6 h-6 flex-shrink-0 transition-transform duration-200 text-[#09BEFC] ${
-                      openIndex === index ? "rotate-180" : ""
-                    }`}
+                    style={{
+                      width: "24px",
+                      height: "24px",
+                      flexShrink: 0,
+                      transform: openIndex === index ? "rotate(180deg)" : "rotate(0deg)",
+                      transition: "transform 0.2s",
+                      color: "#09BEFC",
+                    }}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -117,11 +171,20 @@ export default function QAPage() {
                 </button>
 
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    openIndex === index ? "max-h-96" : "max-h-0"
-                  }`}
+                  style={{
+                    maxHeight: openIndex === index ? "500px" : "0",
+                    overflow: "hidden",
+                    transition: "max-height 0.3s ease-in-out",
+                  }}
                 >
-                  <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                  <div
+                    style={{
+                      padding: "0 2rem 1.5rem 2rem",
+                      color: "#4B5563",
+                      fontSize: "1.125rem",
+                      lineHeight: "1.7",
+                    }}
+                  >
                     {faq.answer}
                   </div>
                 </div>
@@ -131,31 +194,88 @@ export default function QAPage() {
         </div>
       </section>
 
-      {/* CTA Section - EXACT match to Services page structure */}
-      <section className="py-20 bg-gradient-to-br from-[#06316D] via-[#04254f] to-[#021633] text-white">
+      {/* CTA Section - Matches Contact page gradient and button styling */}
+      <section
+        style={{
+          background: "linear-gradient(to right bottom, rgb(6, 49, 109), rgb(9, 190, 252))",
+          paddingTop: "80px",
+          paddingBottom: "80px",
+          color: "#ffffff",
+        }}
+      >
         <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 2rem" }}>
-          <div className="text-center">
-            <h2 style={{ fontSize: "2.5rem", fontWeight: "bold", marginBottom: "1.5rem" }}>
+          <div style={{ textAlign: "center" }}>
+            <h2
+              style={{
+                fontSize: "2.5rem",
+                fontWeight: "bold",
+                marginBottom: "1.5rem",
+                lineHeight: "1.2",
+              }}
+            >
               Still Have Questions?
             </h2>
-            <p style={{ fontSize: "1.25rem", opacity: 0.9, maxWidth: "700px", margin: "0 auto 2rem" }}>
+            <p
+              style={{
+                fontSize: "1.25rem",
+                opacity: 0.9,
+                maxWidth: "700px",
+                margin: "0 auto 2rem",
+                lineHeight: "1.6",
+              }}
+            >
               If you have additional questions or would like to explore how Atlas AI can
               support your business, you can schedule a discovery call. You can also
               review the Services page to learn more about brand systems, SEO support,
               automation workflows, and AI driven marketing solutions.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                gap: "1rem",
+                justifyContent: "center",
+                alignItems: "center",
+                flexWrap: "wrap",
+              }}
+            >
               <Link
                 href="/contact"
-                className="inline-block bg-[#09BEFC] text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-[#08a8e0] transition-colors shadow-lg w-full sm:w-auto text-center"
+                style={{
+                  display: "inline-block",
+                  backgroundColor: "#09BEFC",
+                  color: "#ffffff",
+                  paddingLeft: "2rem",
+                  paddingRight: "2rem",
+                  paddingTop: "0.75rem",
+                  paddingBottom: "0.75rem",
+                  borderRadius: "0.375rem",
+                  fontWeight: "600",
+                  textDecoration: "none",
+                  transition: "opacity 0.2s",
+                  fontSize: "1.125rem",
+                }}
               >
                 Schedule a Discovery Call
               </Link>
 
               <Link
                 href="/services"
-                className="inline-block bg-white text-[#06316D] px-8 py-3 rounded-md font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg border-2 border-white w-full sm:w-auto text-center"
+                style={{
+                  display: "inline-block",
+                  backgroundColor: "#ffffff",
+                  color: "#06316D",
+                  paddingLeft: "2rem",
+                  paddingRight: "2rem",
+                  paddingTop: "0.75rem",
+                  paddingBottom: "0.75rem",
+                  borderRadius: "0.375rem",
+                  fontWeight: "600",
+                  textDecoration: "none",
+                  transition: "opacity 0.2s",
+                  fontSize: "1.125rem",
+                }}
               >
                 View Services
               </Link>
