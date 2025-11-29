@@ -65,13 +65,13 @@ export default function QAPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Matches Services Page */}
-      <section className="bg-gradient-to-br from-[#06316D] via-[#04254f] to-[#021633] text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-br from-[#06316D] via-[#04254f] to-[#021633] text-white">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Frequently Asked Questions
           </h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
             This page covers the most common questions businesses ask about Atlas AI
             and how our solutions work. The goal is to provide clear information about
             our services, structure, and approach. If you are exploring AI driven
@@ -83,8 +83,8 @@ export default function QAPage() {
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-4">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -92,13 +92,13 @@ export default function QAPage() {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full text-left p-6 flex justify-between items-start gap-4 hover:bg-gray-50 transition-colors"
+                  className="w-full text-left p-6 flex justify-between items-center gap-6 hover:bg-gray-50 transition-colors"
                 >
-                  <span className="text-lg font-semibold text-[#06316D] leading-relaxed pr-4">
+                  <span className="text-lg font-semibold text-[#06316D] leading-relaxed flex-1">
                     {faq.question}
                   </span>
                   <svg
-                    className={`w-5 h-5 flex-shrink-0 transition-transform duration-200 text-[#09BEFC] ${
+                    className={`w-6 h-6 flex-shrink-0 transition-transform duration-200 text-[#09BEFC] ${
                       openIndex === index ? "rotate-180" : ""
                     }`}
                     fill="none"
@@ -129,9 +129,9 @@ export default function QAPage() {
         </div>
       </section>
 
-      {/* CTA Section - Matches Services Page Style */}
+      {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-[#06316D] via-[#04254f] to-[#021633] text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Still Have Questions?
           </h2>
@@ -142,7 +142,7 @@ export default function QAPage() {
             automation workflows, and AI driven marketing solutions.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="/contact"
               className="inline-block bg-[#09BEFC] text-white px-8 py-3 rounded-md font-semibold text-lg hover:bg-[#08a8e0] transition-colors shadow-lg w-full sm:w-auto text-center"
