@@ -200,53 +200,51 @@ export default function QA() {
           </p>
           
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href="/contact">
-              <a
-                style={{
-                  display: 'inline-block',
-                  backgroundColor: '#06316D',
-                  color: '#ffffff',
-                  paddingLeft: '2rem',
-                  paddingRight: '2rem',
-                  paddingTop: '0.75rem',
-                  paddingBottom: '0.75rem',
-                  borderRadius: '0.375rem',
-                  fontWeight: '600',
-                  fontSize: '1rem',
-                  textDecoration: 'none',
-                  transition: 'opacity 0.2s',
-                  boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
-                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
-              >
-                Schedule a Discovery Call
-              </a>
+            <Link 
+              href="/contact"
+              style={{
+                display: 'inline-block',
+                backgroundColor: '#06316D',
+                color: '#ffffff',
+                paddingLeft: '2rem',
+                paddingRight: '2rem',
+                paddingTop: '0.75rem',
+                paddingBottom: '0.75rem',
+                borderRadius: '0.375rem',
+                fontWeight: '600',
+                fontSize: '1rem',
+                textDecoration: 'none',
+                transition: 'opacity 0.2s',
+                boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
+              onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
+            >
+              Schedule a Discovery Call
             </Link>
             
-            <Link href="/services">
-              <a
-                style={{
-                  display: 'inline-block',
-                  backgroundColor: '#ffffff',
-                  color: '#06316D',
-                  paddingLeft: '2rem',
-                  paddingRight: '2rem',
-                  paddingTop: '0.75rem',
-                  paddingBottom: '0.75rem',
-                  borderRadius: '0.375rem',
-                  fontWeight: '600',
-                  fontSize: '1rem',
-                  textDecoration: 'none',
-                  transition: 'background-color 0.2s',
-                  border: '2px solid #06316D',
-                  boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f9fafb'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
-              >
-                View Services
-              </a>
+            <Link 
+              href="/services"
+              style={{
+                display: 'inline-block',
+                backgroundColor: '#ffffff',
+                color: '#06316D',
+                paddingLeft: '2rem',
+                paddingRight: '2rem',
+                paddingTop: '0.75rem',
+                paddingBottom: '0.75rem',
+                borderRadius: '0.375rem',
+                fontWeight: '600',
+                fontSize: '1rem',
+                textDecoration: 'none',
+                transition: 'background-color 0.2s',
+                border: '2px solid #06316D',
+                boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f9fafb'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
+            >
+              View Services
             </Link>
           </div>
         </div>
