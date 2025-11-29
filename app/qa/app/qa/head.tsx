@@ -1,78 +1,109 @@
 export default function Head() {
-  const faqs = [
-    {
-      question: "What does Atlas AI do as an AI growth and marketing agency?",
-      answer: "Atlas AI builds brand systems, marketing workflows, and AI-enabled automation that help logistics and service-based companies grow with less complexity. The focus is on clear messaging, SEO, content development, and practical AI tools that support consistent and effective marketing."
-    },
-    {
-      question: "Who does Atlas AI serve?",
-      answer: "We primarily serve logistics companies, freight brokers, trucking operations, supply chain businesses, and service-based B2B companies. Our industry expertise allows us to understand your challenges and speak your language."
-    },
-    {
-      question: "How is Atlas AI different from traditional marketing agencies?",
-      answer: "We combine 15+ years of logistics industry experience with cutting-edge AI tools. We're not just marketers—we're industry insiders who understand your world. Our approach integrates AI automation, data-driven strategy, and hands-on execution to deliver faster results with lower costs."
-    },
-    {
-      question: "Does Atlas AI offer AI training for teams?",
-      answer: "Yes! We provide custom AI workshops, hands-on training sessions, and ongoing enablement to help your team leverage AI tools confidently. We build capabilities that drive immediate results, not just theory."
-    },
-    {
-      question: "Does our team need AI experience before working with Atlas AI?",
-      answer: "Not at all. We meet you where you are. Whether your team is AI-curious or already experimenting with tools, we tailor our approach to your current level and build from there."
-    },
-    {
-      question: "What services does Atlas AI offer?",
-      answer: "We offer AI-powered brand systems, AI-driven marketing and growth, thought leadership and media influence, AI integration and automation, fractional CMO services, and team training. Visit our Services page for detailed information on each offering."
-    },
-    {
-      question: "How long does it take to see results?",
-      answer: "Initial improvements can be seen within 30-60 days, with significant growth typically occurring within 3-6 months. Timeline varies based on your starting point, goals, and the services you choose."
-    },
-    {
-      question: "How much does it cost to work with Atlas AI?",
-      answer: "Investment varies based on scope, services, and business needs. We create custom packages tailored to your specific goals and budget. Schedule a discovery call to discuss pricing options that work for your business."
-    },
-    {
-      question: "Does Atlas AI work with businesses outside the logistics industry?",
-      answer: "While logistics is our specialty, we also work with service-based B2B companies, professional services, and businesses looking to integrate AI into their marketing and operations. If you value industry expertise and AI-driven growth, we can help."
-    },
-    {
-      question: "How do we get started?",
-      answer: "Schedule a complimentary discovery call to discuss your goals, challenges, and how Atlas AI can support your growth. We'll explore your needs and determine if we're a good fit. From there, we'll create a custom plan tailored to your business."
-    }
-  ];
-
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does Atlas AI do as an AI growth and marketing agency?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Atlas AI builds brand systems, marketing workflows, and practical AI tools that help logistics companies, freight brokers, trucking carriers, and service-based businesses grow with more clarity and less complexity. We focus on messaging, positioning, SEO, automation, and execution systems that support long-term growth."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who does Atlas AI serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Atlas AI partners with logistics and service-based organizations including trucking companies, freight brokerages, fleet owners, 3PLs, warehousing teams, and professional service companies. We work with teams that want better branding, clearer messaging, and AI-powered marketing systems without needing a full internal department."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is Atlas AI different from traditional marketing agencies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most agencies focus on producing content. Atlas AI focuses on building the systems behind the content. This includes messaging frameworks, brand positioning, SEO strategy, automation, AI workflows, content planning, and fractional CMO support. Instead of chasing trends, we give you a repeatable structure that supports consistent revenue and easier execution."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Atlas AI offer AI training for teams?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We provide hands-on AI training that helps your team work faster and stay consistent. Training includes workflow design, templates, guided exercises, and customized systems that make everyday marketing tasks simpler and more efficient."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does our team need AI experience before working with Atlas AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Your team does not need any AI experience before working with us. We handle setup, workflow creation, integration, and training. Everything is designed to be simple, practical, and easy for your team to use right away."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What services does Atlas AI offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Atlas AI provides a full suite of brand and marketing system services including: Brand clarity and messaging systems, AI-powered marketing workflows, SEO and website optimization, Content strategy and planning, Fractional CMO support, Team AI enablement and training, and Automation and workflow design. These systems are built to bring more consistency, stronger positioning, and a clear path to growth."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to see results?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most clients begin seeing clarity, alignment, and better execution within the first 30 to 90 days. For SEO, automation, or brand redevelopment, results build over time as systems are implemented and your team begins using them consistently."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost to work with Atlas AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Project engagements begin around $3,000. Monthly support starts around $1,500. Fractional CMO retainers begin at $3,000 per month. Most client engagements fall in the low to mid five-figure range depending on the depth of strategy, implementation, and ongoing support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Atlas AI work with companies outside the logistics industry?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. While logistics is our specialty, our brand and marketing systems work for any service-based business that needs stronger messaging, better execution, and practical AI support. We partner with consulting firms, agencies, healthcare organizations, and professional service teams as well."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do we get started?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can schedule a discovery call through the contact page. During the call, we review your goals, current systems, brand positioning, and operational structure. Then we recommend the best next step and outline what your custom AI-powered marketing system would look like."
+        }
       }
-    } ))
+    ]
   };
 
   return (
     <>
-      <title>FAQ - Atlas AI | Frequently Asked Questions</title>
-      <meta name="description" content="Get answers to common questions about Atlas AI's AI-powered marketing, branding, automation, and growth services for logistics and service-based companies." />
-      <meta name="keywords" content="Atlas AI FAQ, AI marketing questions, logistics marketing, AI automation, brand systems, fractional CMO, AI training" />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content="FAQ - Atlas AI | Frequently Asked Questions" />
-      <meta property="og:description" content="Get answers to common questions about Atlas AI's AI-powered marketing, branding, automation, and growth services for logistics and service-based companies." />
+      <title>FAQ - Atlas AI Growth & Marketing Agency | Frequently Asked Questions</title>
+      <meta
+        name="description"
+        content="Common questions about Atlas AI's brand systems, AI-powered marketing workflows, SEO services, and fractional CMO support for logistics and service-based businesses."
+      />
+      <meta
+        name="keywords"
+        content="Atlas AI FAQ, AI marketing agency questions, logistics marketing, freight broker marketing, trucking marketing, AI training, fractional CMO, brand systems"
+      />
+      <meta property="og:title" content="FAQ - Atlas AI Growth & Marketing Agency" />
+      <meta
+        property="og:description"
+        content="Get answers to common questions about Atlas AI's services, pricing, and approach to AI-powered marketing for logistics and service-based businesses."
+      />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.atlasaimarketing.co/qa" />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="FAQ - Atlas AI | Frequently Asked Questions" />
-      <meta name="twitter:description" content="Get answers to common questions about Atlas AI's AI-powered marketing, branding, automation, and growth services for logistics and service-based companies." />
-      
-      {/* FAQ Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema ) }}
