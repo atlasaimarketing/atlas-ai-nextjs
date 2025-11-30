@@ -1,6 +1,7 @@
 {
   "name": "atlas-ai-nextjs",
   "version": "0.1.0",
+  "description": "Atlas AI Marketing - Premium Blog System",
   "private": true,
   "scripts": {
     "dev": "next dev",
