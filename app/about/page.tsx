@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About | Atlas AI Growth & Marketing Agency",
@@ -9,19 +10,157 @@ export default function About() {
   return (
     <main style={{ padding: "6rem 2rem", minHeight: "60vh" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <h1 style={{ fontSize: "3rem", fontWeight: "bold", color: "#001F54", marginBottom: "2rem", textAlign: "center" }}>
+        <h1 style={{ fontSize: "3rem", fontWeight: "bold", color: "#001F54", marginBottom: "2rem" }}>
           About Atlas AI Growth & Marketing Agency
         </h1>
+        
         <div style={{ fontSize: "1.125rem", lineHeight: "1.8", color: "#555" }}>
           <p style={{ marginBottom: "1.5rem" }}>
-            <strong>Atlas AI Growth & Marketing Agency</strong> is a growth and marketing agency dedicated to helping logistics, supply chain, and service-based companies modernize, scale, and automate their brand in the new era of artificial intelligence.
+            <strong>Atlas AI Growth & Marketing Agency</strong> was built with one clear intention: to give service-based, logistics, and transportation companies the tools, systems, and strategy they need to grow in a world powered by artificial intelligence. Our agency brings together marketing, technology, and real industry experience to help businesses streamline operations, elevate their brand presence, and unlock consistent, measurable results.
           </p>
+          
           <p style={{ marginBottom: "1.5rem" }}>
-            We blend over 15 years of real-world experience in truck driver recruiting and logistics operations with cutting-edge AI innovation to deliver practical, results-driven solutions that give your business a competitive edge.
+            Companies today don't just need content. They don't just need ads. They need integrated <Link href="/services" style={{ color: "#007BFF", textDecoration: "none", fontWeight: "600" }}>AI-powered systems</Link> that think, learn, and adapt. That's where Atlas AI steps in. We help modern, ambitious companies move past outdated marketing and into a structure that makes growth predictable.
           </p>
+
+          <h2 style={{ fontSize: "2rem", fontWeight: "bold", color: "#001F54", marginTop: "3rem", marginBottom: "1.5rem" }}>
+            Our Approach
+          </h2>
+          
           <p style={{ marginBottom: "1.5rem" }}>
-            Led by <strong>Kameel E. Gaines</strong>, Founder & Chief AI Marketing Strategist, our agency brings together marketing, technology, and real industry experience to help businesses streamline operations, elevate their brand presence, and unlock consistent, measurable results.
+            We blend AI technology with real-world strategy to build solutions that feel human, communicate clearly, and convert consistently. Every system we build is grounded in three pillars:
           </p>
+          
+          <ul style={{ marginBottom: "1.5rem", paddingLeft: "2rem" }}>
+            <li style={{ marginBottom: "0.75rem" }}><strong>Clarity</strong> – clean messaging, intentional branding, and a strong identity</li>
+            <li style={{ marginBottom: "0.75rem" }}><strong>Precision</strong> – smart automation, efficient workflows, and data-backed decisions</li>
+            <li style={{ marginBottom: "0.75rem" }}><strong>Growth</strong> – long-term systems that reduce effort while increasing return</li>
+          </ul>
+          
+          <p style={{ marginBottom: "1.5rem" }}>
+            We build with purpose, using AI as the engine and strategy as the driver.
+          </p>
+
+          <h2 style={{ fontSize: "2rem", fontWeight: "bold", color: "#001F54", marginTop: "3rem", marginBottom: "1.5rem" }}>
+            What Makes Atlas AI Different
+          </h2>
+          
+          <p style={{ marginBottom: "1.5rem" }}>
+            Most agencies sell services.<br />
+            <strong>Atlas AI builds systems.</strong>
+          </p>
+          
+          <p style={{ marginBottom: "1.5rem" }}>
+            Our work is designed to help companies:
+          </p>
+          
+          <ul style={{ marginBottom: "1.5rem", paddingLeft: "2rem" }}>
+            <li style={{ marginBottom: "0.75rem" }}>Stand out in competitive markets</li>
+            <li style={{ marginBottom: "0.75rem" }}>Automate key marketing and engagement tasks</li>
+            <li style={{ marginBottom: "0.75rem" }}>Improve lead quality and conversion rates</li>
+            <li style={{ marginBottom: "0.75rem" }}>Strengthen branding and digital identity</li>
+            <li style={{ marginBottom: "0.75rem" }}>Scale without adding unnecessary complexity</li>
+          </ul>
+          
+          <p style={{ marginBottom: "1.5rem" }}>
+            We focus on the foundational elements companies need to grow: <Link href="/services" style={{ color: "#007BFF", textDecoration: "none", fontWeight: "600" }}>branding and messaging systems</Link>, marketing infrastructure, and AI-enhanced communication tools.
+          </p>
+
+          <h2 style={{ fontSize: "2rem", fontWeight: "bold", color: "#001F54", marginTop: "3rem", marginBottom: "1.5rem" }}>
+            The Industries We Serve
+          </h2>
+          
+          <p style={{ marginBottom: "1.5rem" }}>
+            Although our work spans multiple sectors, our deepest expertise is in:
+          </p>
+          
+          <ul style={{ marginBottom: "1.5rem", paddingLeft: "2rem" }}>
+            <li style={{ marginBottom: "0.75rem" }}>Logistics and transportation</li>
+            <li style={{ marginBottom: "0.75rem" }}>Service-based industries</li>
+            <li style={{ marginBottom: "0.75rem" }}>High-risk and compliance-heavy industries</li>
+            <li style={{ marginBottom: "0.75rem" }}>Companies undergoing digital transformation</li>
+          </ul>
+          
+          <p style={{ marginBottom: "1.5rem" }}>
+            These spaces require accuracy, compliance awareness, strong branding, and high trust. Our systems are built with those real-world demands in mind.
+          </p>
+
+          <h2 style={{ fontSize: "2rem", fontWeight: "bold", color: "#001F54", marginTop: "3rem", marginBottom: "1.5rem" }}>
+            Our Commitment
+          </h2>
+          
+          <p style={{ marginBottom: "1.5rem", fontStyle: "italic", fontSize: "1.25rem", color: "#001F54" }}>
+            Make growth easier for the companies that keep America moving.
+          </p>
+          
+          <p style={{ marginBottom: "1.5rem" }}>
+            We build with intention.<br />
+            We simplify complexity.<br />
+            We prioritize systems that scale.
+          </p>
+          
+          <p style={{ marginBottom: "1.5rem" }}>
+            Atlas AI exists to help businesses grow with confidence, clarity, and smarter strategies.
+          </p>
+
+          <h2 style={{ fontSize: "2rem", fontWeight: "bold", color: "#001F54", marginTop: "3rem", marginBottom: "1.5rem" }}>
+            Leadership & Strategic Direction
+          </h2>
+          
+          <p style={{ marginBottom: "1.5rem" }}>
+            <strong>Led by Kameel E. Gaines</strong><br />
+            <em>Founder & Chief AI Marketing Strategist</em>
+          </p>
+          
+          <p style={{ marginBottom: "1.5rem" }}>
+            Atlas AI is guided by the leadership of Kameel E. Gaines, whose background in logistics, <Link href="/services" style={{ color: "#007BFF", textDecoration: "none", fontWeight: "600" }}>AI marketing strategy</Link>, recruiting, and brand development shaped the agency's foundation. Her strategic oversight ensures that every system, every build, and every client solution is rooted in industry-specific insight and built to drive meaningful results.
+          </p>
+
+          <h2 style={{ fontSize: "2rem", fontWeight: "bold", color: "#001F54", marginTop: "3rem", marginBottom: "1.5rem" }}>
+            Continue Exploring Atlas AI
+          </h2>
+          
+          <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap", marginTop: "2rem" }}>
+            <Link 
+              href="/services" 
+              style={{ 
+                padding: "0.75rem 1.5rem", 
+                backgroundColor: "#007BFF", 
+                color: "#fff", 
+                textDecoration: "none", 
+                borderRadius: "4px",
+                fontWeight: "600"
+              }}
+            >
+              View Our Services
+            </Link>
+            <Link 
+              href="/contact" 
+              style={{ 
+                padding: "0.75rem 1.5rem", 
+                backgroundColor: "#001F54", 
+                color: "#fff", 
+                textDecoration: "none", 
+                borderRadius: "4px",
+                fontWeight: "600"
+              }}
+            >
+              Contact Our Team
+            </Link>
+            <Link 
+              href="/" 
+              style={{ 
+                padding: "0.75rem 1.5rem", 
+                border: "2px solid #001F54", 
+                color: "#001F54", 
+                textDecoration: "none", 
+                borderRadius: "4px",
+                fontWeight: "600"
+              }}
+            >
+              Home
+            </Link>
+          </div>
         </div>
       </div>
     </main>
