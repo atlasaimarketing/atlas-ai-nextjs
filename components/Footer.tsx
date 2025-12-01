@@ -27,8 +27,9 @@ export default function Footer() {
             style={{ marginBottom: "1rem" }}
           />
           <p style={{ fontSize: "0.9rem", lineHeight: "1.6" }}>
-            Atlas AI: The Growth Agency<br />
-            Where Logistics Expertise Meets Intelligence.
+            <strong>Atlas AI Growth & Marketing Agency</strong><br />
+            Houston, Texas<br />
+            Serving clients across the United States and internationally.
           </p>
         </div>
 

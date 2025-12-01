@@ -1,8 +1,13 @@
-"use client";
+import type { Metadata } from "next";
 
 import Link from "next/link";
 import { blogPosts } from "@/data/blogData";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Insights & Resources | Atlas AI Growth & Marketing Agency",
+  description: "Industry insights, AI strategies, and growth tips from Atlas AI Growth & Marketing Agency for logistics and service-based companies.",
+};
 
 export default function Insights() {
   return (
@@ -14,7 +19,7 @@ export default function Insights() {
             Insights & Resources
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-            Expert insights on AI, marketing, logistics, and business growth from the Atlas AI team
+            Expert insights on AI, marketing, logistics, and business growth from the <strong>Atlas AI Growth & Marketing Agency</strong> team
           </p>
         </div>
       </section>

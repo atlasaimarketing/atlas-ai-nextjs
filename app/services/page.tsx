@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Services | Atlas AI Growth & Marketing Agency",
+  description: "Explore AI-powered marketing services from Atlas AI Growth & Marketing Agency. Branding, automation, thought leadership, and AI integration for logistics companies.",
+};
 
 export default function Services() {
   const services = [

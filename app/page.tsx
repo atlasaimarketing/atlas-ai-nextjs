@@ -19,7 +19,7 @@ export default function Home() {
             Where Industry Expertise Meets AI Innovation
           </h1>
           <p style={{ fontSize: "clamp(1rem, 2.5vw, 1.25rem)", opacity: 0.9, maxWidth: "900px", margin: "0 auto 3rem" }}>
-            We help logistics and service-based businesses grow through AI-powered branding, marketing, and automation systems.
+            <strong>Atlas AI Growth & Marketing Agency</strong> helps logistics and service-based businesses grow through AI-powered branding, marketing, and automation systems.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <Link 

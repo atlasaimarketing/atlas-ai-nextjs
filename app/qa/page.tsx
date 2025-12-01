@@ -3,6 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 
+// Note: metadata export not supported in client components
+// SEO handled by parent layout
+
 export default function QAPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
