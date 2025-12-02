@@ -357,7 +357,7 @@ export default function Home() {
               style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
             />
             <Image 
-              src="/assets/trust-logos/rig-on-wheels.jpg" 
+              src="/assets/trust-logos/rig-on-wheels.png" 
               alt="The Rig On Wheels Show" 
               width={120} 
               height={120}
@@ -429,6 +429,13 @@ export default function Home() {
               alt="HD Screening Lab" 
               width={100} 
               height={100}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+            <Image 
+              src="/assets/trust-logos/rig-on-wheels-broker.jpg" 
+              alt="Rig On Wheels Broker & Recruitment Services" 
+              width={140} 
+              height={80}
               style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
             />
           </div>
