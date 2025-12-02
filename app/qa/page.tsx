@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 // Note: metadata export not supported in client components
@@ -65,6 +65,31 @@ export default function QAPage() {
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  // Add FAQ schema to page
+  useEffect(() => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
