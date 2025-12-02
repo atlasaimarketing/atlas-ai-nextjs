@@ -103,7 +103,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <head>
+      <body className={`${inter.variable} font-sans antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -112,8 +112,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
-      </head>
-      <body className={`${inter.variable} font-sans antialiased`}>
         <Navigation />
         {children}
         <Footer />
