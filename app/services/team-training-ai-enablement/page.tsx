@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Team Training & AI Enablement | Atlas AI Growth & Marketing Agency",
@@ -54,6 +55,11 @@ export default function TeamTrainingPage() {
       />
       
       <div className="min-h-screen">
+        <Breadcrumb items={[
+          { label: "Home", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: "Team Training & AI Enablement", href: "/services/team-training-ai-enablement" }
+        ]} />
         {/* Hero Section */}
         <section style={{
           background: "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)",

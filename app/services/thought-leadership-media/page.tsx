@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Thought Leadership & Media Influence | Atlas AI Growth & Marketing Agency",
@@ -54,6 +55,11 @@ export default function ThoughtLeadershipPage() {
       />
       
       <div className="min-h-screen">
+        <Breadcrumb items={[
+          { label: "Home", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: "Thought Leadership & Media Influence", href: "/services/thought-leadership-media" }
+        ]} />
         {/* Hero Section */}
         <section style={{
           background: "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)",

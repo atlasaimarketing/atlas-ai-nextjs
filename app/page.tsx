@@ -78,35 +78,41 @@ export default function Home() {
               {
                 image: "/assets/brand-systems.png",
                 title: "AI-Powered Brand Systems",
-                description: "Brand systems that think: from identity design to AI-driven brand voice and visual frameworks."
+                description: "Brand systems that think: from identity design to AI-driven brand voice and visual frameworks.",
+                url: "/services/ai-powered-brand-systems"
               },
               {
                 image: "/assets/marketing-growth.png",
                 title: "AI-Driven Marketing & Growth",
-                description: "Data-backed marketing ecosystems that convert using automation, analytics, and creative strategy."
+                description: "Data-backed marketing ecosystems that convert using automation, analytics, and creative strategy.",
+                url: "/services/ai-driven-marketing-growth"
               },
               {
                 image: "/assets/thought-leadership.png",
                 title: "Thought Leadership & Media Influence",
-                description: "Turn experts into thought leaders with ghostwriting, media placement, and AI storytelling systems."
+                description: "Turn experts into thought leaders with ghostwriting, media placement, and AI storytelling systems.",
+                url: "/services/thought-leadership-media"
               },
               {
                 image: "/assets/ai-integration.png",
                 title: "AI Integration & Automation",
-                description: "Connect your business systems into seamless digital workflows with CRMs, analytics, and intelligent agents."
+                description: "Connect your business systems into seamless digital workflows with CRMs, analytics, and intelligent agents.",
+                url: "/services/ai-integration-automation"
               },
               {
                 image: "/assets/fractional-cmo.png",
                 title: "Fractional CMO & Growth Leadership",
-                description: "Access AI-driven strategic marketing leadership without full-time costs."
+                description: "Access AI-driven strategic marketing leadership without full-time costs.",
+                url: "/services/fractional-cmo-growth-leadership"
               },
               {
                 image: "/assets/team-training.png",
                 title: "Team Training & AI Enablement",
-                description: "Train your team to use AI with confidence through workshops, SOPs, and live enablement systems."
+                description: "Train your team to use AI with confidence through workshops, SOPs, and live enablement systems.",
+                url: "/services/team-training-ai-enablement"
               }
             ].map((pillar, index) => (
-              <Link key={index} href={`/services#${pillar.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`} style={{ textDecoration: "none" }}>
+              <Link key={index} href={pillar.url} style={{ textDecoration: "none" }}>
                 <div className="pillar-card" style={{
                   backgroundColor: "white",
                   borderRadius: "12px",

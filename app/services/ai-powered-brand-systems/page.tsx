@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "AI-Powered Brand Systems | Atlas AI Growth & Marketing Agency",
@@ -55,6 +56,11 @@ export default function AIBrandSystemsPage() {
       />
       
       <div className="min-h-screen">
+        <Breadcrumb items={[
+          { label: "Home", href: "/" },
+          { label: "Services", href: "/services" },
+          { label: "AI-Powered Brand Systems", href: "/services/ai-powered-brand-systems" }
+        ]} />
         {/* Hero Section */}
         <section style={{
           background: "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)",
