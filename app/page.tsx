@@ -300,6 +300,13 @@ export default function Home() {
             justifyItems: "center"
           }}>
             <Image 
+              src="/assets/trust-logos/forbes-business-council.png" 
+              alt="Forbes Business Council" 
+              width={120} 
+              height={120}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+            <Image 
               src="/assets/trust-logos/women-in-trucking.png" 
               alt="Women In Trucking Association" 
               width={120} 
