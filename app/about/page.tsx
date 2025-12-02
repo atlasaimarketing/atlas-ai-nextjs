@@ -4,6 +4,9 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About | Atlas AI Growth & Marketing Agency",
   description: "Learn about Atlas AI Growth & Marketing Agency - AI-powered marketing solutions for logistics and service-based businesses. Led by Kameel E. Gaines, Chief AI Marketing Strategist.",
+  alternates: {
+    canonical: 'https://www.atlasaimarketing.co/about',
+  },
 };
 
 export default function About() {

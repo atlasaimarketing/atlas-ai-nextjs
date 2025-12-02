@@ -1,0 +1,8 @@
+# robots.txt for Atlas AI Growth & Marketing Agency
+# https://www.atlasaimarketing.co
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.atlasaimarketing.co/sitemap.xml

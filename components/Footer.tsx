@@ -28,8 +28,9 @@ export default function Footer() {
           />
           <p style={{ fontSize: "0.9rem", lineHeight: "1.6" }}>
             <strong>Atlas AI Growth & Marketing Agency</strong><br />
-            Houston, Texas<br />
-            Serving clients across the United States and internationally.
+            Spring, Texas<br />
+            <a href="mailto:info@atlasaimarketing.co" style={{ color: "#00BFFF", textDecoration: "none" }}>info@atlasaimarketing.co</a><br />
+            <a href="tel:+18325839000" style={{ color: "#00BFFF", textDecoration: "none" }}>(832) 583-9000</a>
           </p>
         </div>
 

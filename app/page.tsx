@@ -277,6 +277,81 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trust Logos Section */}
+      <section style={{
+        padding: "4rem 2rem",
+        backgroundColor: "#f8f9fa",
+        textAlign: "center"
+      }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <p style={{
+            fontSize: "1rem",
+            color: "#666",
+            marginBottom: "2.5rem",
+            fontWeight: 500
+          }}>
+            Led by a strategist trusted by organizations such as:
+          </p>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+            gap: "2rem",
+            alignItems: "center",
+            justifyItems: "center"
+          }}>
+            <Image 
+              src="/assets/trust-logos/women-in-trucking.png" 
+              alt="Women In Trucking Association" 
+              width={120} 
+              height={100}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+            <Image 
+              src="/assets/trust-logos/aawta.jpg" 
+              alt="African American Women Trucking Association" 
+              width={100} 
+              height={100}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+            <Image 
+              src="/assets/trust-logos/tmsa.jpg" 
+              alt="TMSA - Transportation Marketing & Sales Association" 
+              width={120} 
+              height={100}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+            <Image 
+              src="/assets/trust-logos/mats.png" 
+              alt="Mid America Trucking Show" 
+              width={120} 
+              height={100}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+            <Image 
+              src="/assets/trust-logos/modex.png" 
+              alt="MODEX" 
+              width={120} 
+              height={100}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+            <Image 
+              src="/assets/trust-logos/motive-vision.png" 
+              alt="Motive Vision Conference" 
+              width={120} 
+              height={100}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+            <Image 
+              src="/assets/trust-logos/manifest.jpg" 
+              alt="Manifest Conference" 
+              width={100} 
+              height={100}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section style={{
         padding: "6rem 2rem",
