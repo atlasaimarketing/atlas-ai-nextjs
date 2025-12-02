@@ -336,10 +336,10 @@ export default function Home() {
               style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
             />
             <Image 
-              src="/assets/trust-logos/modex.png" 
-              alt="MODEX" 
-              width={120} 
-              height={100}
+              src="/assets/trust-logos/modex-2024.jpg" 
+              alt="MODEX 2024" 
+              width={140} 
+              height={80}
               style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
             />
             <Image 
