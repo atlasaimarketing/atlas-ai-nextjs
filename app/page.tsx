@@ -277,9 +277,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust Logos Section */}
+      {/* Industry Credentials Section */}
       <section style={{
-        padding: "4rem 2rem",
+        padding: "4rem 2rem 2rem",
         backgroundColor: "#f8f9fa",
         textAlign: "center"
       }}>
@@ -297,7 +297,8 @@ export default function Home() {
             gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
             gap: "2rem",
             alignItems: "center",
-            justifyItems: "center"
+            justifyItems: "center",
+            marginBottom: "1rem"
           }}>
             <Image 
               src="/assets/trust-logos/forbes-business-council.png" 
@@ -351,6 +352,81 @@ export default function Home() {
             <Image 
               src="/assets/trust-logos/manifest.jpg" 
               alt="Manifest Conference" 
+              width={100} 
+              height={100}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+            <Image 
+              src="/assets/trust-logos/rig-on-wheels.jpg" 
+              alt="The Rig On Wheels Show" 
+              width={120} 
+              height={120}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Client Logos Section */}
+      <section style={{
+        padding: "2rem 2rem 4rem",
+        backgroundColor: "#f8f9fa",
+        textAlign: "center"
+      }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <p style={{
+            fontSize: "1rem",
+            color: "#666",
+            marginBottom: "2.5rem",
+            fontWeight: 500
+          }}>
+            Trusted by leading companies:
+          </p>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+            gap: "2rem",
+            alignItems: "center",
+            justifyItems: "center"
+          }}>
+            <Image 
+              src="/assets/trust-logos/bridgeway.webp" 
+              alt="Bridgeway Connections" 
+              width={140} 
+              height={40}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+            <Image 
+              src="/assets/trust-logos/wreaths-across-america-radio.jpg" 
+              alt="Wreaths Across America Radio" 
+              width={120} 
+              height={100}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+            <Image 
+              src="/assets/trust-logos/action-resources.jpg" 
+              alt="Action Resources" 
+              width={120} 
+              height={100}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+            <Image 
+              src="/assets/trust-logos/atg-recruit.jpg" 
+              alt="ATG Recruit" 
+              width={100} 
+              height={100}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+            <Image 
+              src="/assets/trust-logos/mvt.png" 
+              alt="Mesilla Valley Transportation" 
+              width={120} 
+              height={100}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+            <Image 
+              src="/assets/trust-logos/hd-screening-lab.jpg" 
+              alt="HD Screening Lab" 
               width={100} 
               height={100}
               style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
