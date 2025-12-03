@@ -33,17 +33,18 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   const renderSection = (section: BlogSection, index: number) => {
     switch (section.type) {
       case 'heading':
-        const HeadingTag = `h${section.level || 2}` as keyof JSX.IntrinsicElements;
-        return (
-          <HeadingTag 
-            key={index}
-            className={`font-bold text-[#06316D] mb-4 ${
-              section.level === 2 ? 'text-3xl mt-12' : 'text-2xl mt-8'
-            }`}
-          >
-            {section.content as string}
-          </HeadingTag>
-        );
+        const level = section.level || 2;
+        const className = `font-bold text-[#06316D] mb-4 ${
+          level === 2 ? 'text-3xl mt-12' : 'text-2xl mt-8'
+        }`;
+        
+        if (level === 2) {
+          return <h2 key={index} className={className}>{section.content as string}</h2>;
+        } else if (level === 3) {
+          return <h3 key={index} className={className}>{section.content as string}</h3>;
+        } else {
+          return <h4 key={index} className={className}>{section.content as string}</h4>;
+        }
       
       case 'paragraph':
         return (
