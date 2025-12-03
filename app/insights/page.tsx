@@ -131,7 +131,7 @@ export default function Insights() {
       </section>
 
       {/* Newsletter CTA Section */}
-      <section className="bg-gradient-to-r from-[#06316D] to-[#0a4a9e] py-20">
+      <section className="bg-gradient-to-r from-[#06316D] to-[#0a4a9e] py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 px-2">
@@ -142,34 +142,34 @@ export default function Insights() {
               Join logistics leaders who are transforming their businesses with AI.
             </p>
             
-            <form onSubmit={handleSubscribe} className="max-w-2xl mx-auto">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <form onSubmit={handleSubscribe} className="max-w-3xl mx-auto">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch">
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email address"
                   disabled={isSubmitting}
-                  className="w-full sm:flex-1 px-6 py-4 rounded-lg text-gray-900 placeholder:text-gray-500 bg-white border-2 border-white focus:outline-none focus:ring-2 focus:ring-[#09BEFC] focus:border-[#09BEFC] shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full sm:flex-1 px-6 py-5 text-lg rounded-lg text-gray-900 placeholder:text-gray-500 bg-white border-2 border-white focus:outline-none focus:ring-2 focus:ring-[#09BEFC] focus:border-[#09BEFC] shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                   required
                 />
                 <button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto bg-[#09BEFC] hover:bg-white hover:text-[#06316D] text-white font-semibold px-8 py-4 rounded-lg whitespace-nowrap transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full sm:w-auto bg-[#09BEFC] hover:bg-white hover:text-[#06316D] text-white font-bold text-lg px-10 py-5 rounded-lg whitespace-nowrap transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Subscribing..." : "Subscribe Now"}
                 </button>
               </div>
               
               {message && (
-                <div className={`mt-4 p-4 rounded-lg ${message.type === "success" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"}`}>
+                <div className={`mt-6 p-5 rounded-lg font-semibold text-center shadow-lg ${message.type === "success" ? "bg-green-50 text-green-900 border-2 border-green-200" : "bg-red-50 text-red-900 border-2 border-red-200"}`}>
                   {message.text}
                 </div>
               )}
             </form>
             
-            <p className="text-sm text-blue-200 mt-4">
+            <p className="text-sm text-blue-200 mt-6">
               No spam. Unsubscribe anytime. We respect your privacy.
             </p>
           </div>
