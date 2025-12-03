@@ -190,7 +190,7 @@ export default function Insights() {
               href="https://calendly.com/atlasaimarketing-info/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-[#09BEFC] hover:bg-[#06316D] text-white font-semibold px-8 py-4 rounded-lg transition-colors"
+              className="inline-block bg-[#09BEFC] hover:bg-[#06316D] text-white font-bold text-base md:text-lg px-8 md:px-12 py-4 md:py-5 rounded-lg transition-colors shadow-lg"
             >
               Book Your 30-Minute Strategy Call
             </a>
