@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Clock, Calendar, ArrowRight } from "lucide-react";
 import { getAllBlogPosts } from "@/lib/blogData";
-import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -114,12 +113,11 @@ export default function Insights() {
                 placeholder="Enter your email address"
                 className="w-full sm:flex-1 px-6 py-4 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#09BEFC]"
               />
-              <Button 
-                size="lg" 
-                className="w-full sm:w-auto bg-[#09BEFC] hover:bg-white hover:text-[#06316D] text-white font-semibold px-8 py-4 whitespace-nowrap"
+              <button 
+                className="w-full sm:w-auto bg-[#09BEFC] hover:bg-white hover:text-[#06316D] text-white font-semibold px-8 py-4 rounded-lg whitespace-nowrap transition-colors"
               >
                 Subscribe Now
-              </Button>
+              </button>
             </div>
             <p className="text-sm text-blue-200 mt-4">
               No spam. Unsubscribe anytime. We respect your privacy.
@@ -142,10 +140,9 @@ export default function Insights() {
               href="https://calendly.com/atlasaimarketing-info/30min"
               target="_blank"
               rel="noopener noreferrer"
+              className="inline-block bg-[#09BEFC] hover:bg-[#06316D] text-white font-semibold px-8 py-4 rounded-lg transition-colors"
             >
-              <Button size="lg" className="bg-[#09BEFC] hover:bg-[#06316D] text-white font-semibold px-8 py-4">
-                Book Your 30-Minute Strategy Call
-              </Button>
+              Book Your 30-Minute Strategy Call
             </a>
           </div>
         </div>

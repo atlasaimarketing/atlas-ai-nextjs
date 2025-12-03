@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft, Clock, Calendar, Share2, Linkedin, Twitter, Facebook } from "lucide-react";
 import { getBlogPostBySlug, getRelatedPosts, type BlogSection } from "@/lib/blogData";
-import { Button } from "@/components/ui/button";
 
 interface BlogPostPageProps {
   params: {
@@ -19,11 +18,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         <div className="container py-20 text-center">
           <h1 className="text-4xl font-bold text-[#06316D] mb-4">Blog Post Not Found</h1>
           <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
-          <Link href="/insights">
-            <Button className="bg-[#09BEFC] hover:bg-[#06316D] text-white">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Insights
-            </Button>
+          <Link href="/insights" className="inline-flex items-center bg-[#09BEFC] hover:bg-[#06316D] text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Insights
           </Link>
         </div>
       </div>
