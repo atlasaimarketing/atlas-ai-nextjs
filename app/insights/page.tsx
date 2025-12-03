@@ -44,7 +44,8 @@ export default async function Insights() {
                           <img
                             src={post.featuredImage}
                             alt={post.title}
-                            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                            style={{ objectPosition: 'center 20%' }}
                           />
                           {post.category && (
                             <div className="absolute top-4 left-4">
