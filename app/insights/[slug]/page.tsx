@@ -89,28 +89,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </section>
 
-      {/* Featured Image */}
-      {post.featuredImage && (
-        <section className="relative w-full" style={{ height: '400px' }}>
-          <img
-            src={post.featuredImage}
-            alt={post.title}
-            className="w-full h-full object-cover"
-          />
-        </section>
-      )}
+
 
       {/* Article Content */}
       <article className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            {/* Excerpt */}
-            {post.excerpt && (
-              <div className="text-xl text-gray-700 mb-12 pb-12 border-b border-gray-200 italic">
-                {post.excerpt}
-              </div>
-            )}
-
             {/* Main Content */}
             <div className="prose prose-lg max-w-none">
               <PortableText 
