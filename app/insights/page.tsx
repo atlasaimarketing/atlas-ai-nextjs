@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Clock, Calendar, ArrowRight } from "lucide-react";
 import { getAllBlogPosts } from "@/lib/blogData";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Insights & Thought Leadership | Atlas AI Growth & Marketing Agency",
@@ -18,7 +18,7 @@ export default function Insights() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#06316D] via-[#0a4a9e] to-[#06316D] text-white py-20">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Insights & Thought Leadership
@@ -33,7 +33,7 @@ export default function Insights() {
 
       {/* Blog Grid */}
       <section className="py-20">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post) => (
@@ -98,7 +98,7 @@ export default function Insights() {
 
       {/* Newsletter CTA Section */}
       <section className="bg-gradient-to-r from-[#06316D] to-[#0a4a9e] py-20">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Stay Ahead with AI Insights
@@ -128,7 +128,7 @@ export default function Insights() {
 
       {/* Contact CTA */}
       <section className="py-20 bg-gray-50">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-[#06316D] mb-6">
               Ready to Transform Your Business?
@@ -150,4 +150,3 @@ export default function Insights() {
     </div>
   );
 }
-// Force rebuild

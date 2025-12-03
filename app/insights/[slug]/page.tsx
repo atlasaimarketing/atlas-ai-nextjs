@@ -15,7 +15,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   if (!post) {
     return (
       <div className="min-h-screen bg-white">
-        <div className="container py-20 text-center">
+        <div className="container mx-auto px-4 py-20 text-center">
           <h1 className="text-4xl font-bold text-[#06316D] mb-4">Blog Post Not Found</h1>
           <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
           <Link href="/insights" className="inline-flex items-center bg-[#09BEFC] hover:bg-[#06316D] text-white font-semibold px-6 py-3 rounded-lg transition-colors">
@@ -27,216 +27,206 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     );
   }
 
-  const renderContent = (section: BlogSection, index: number) => {
+  const shareUrl = `https://www.atlasaimarketing.co/insights/${post.slug}`;
+  const shareTitle = encodeURIComponent(post.title);
+
+  const renderSection = (section: BlogSection, index: number) => {
     switch (section.type) {
       case 'heading':
-        const HeadingTag = `h${section.level}` as keyof JSX.IntrinsicElements;
-        const headingClasses = {
-          2: 'text-3xl font-bold text-[#06316D] mt-12 mb-6 leading-tight',
-          3: 'text-2xl font-semibold text-[#06316D] mt-10 mb-4 leading-tight',
-          4: 'text-xl font-semibold text-[#06316D] mt-8 mb-3 leading-tight'
-        };
+        const HeadingTag = `h${section.level || 2}` as keyof JSX.IntrinsicElements;
         return (
-          <HeadingTag key={index} className={headingClasses[section.level as 2 | 3 | 4]}>
+          <HeadingTag 
+            key={index}
+            className={`font-bold text-[#06316D] mb-4 ${
+              section.level === 2 ? 'text-3xl mt-12' : 'text-2xl mt-8'
+            }`}
+          >
             {section.content as string}
           </HeadingTag>
         );
-
+      
       case 'paragraph':
         return (
           <p key={index} className="text-lg text-gray-700 leading-relaxed mb-6">
             {section.content as string}
           </p>
         );
-
+      
       case 'list':
         return (
-          <ul key={index} className="space-y-3 mb-6 ml-6">
+          <ul key={index} className="list-disc list-inside space-y-3 mb-6 text-lg text-gray-700">
             {(section.content as string[]).map((item, i) => (
-              <li key={i} className="text-lg text-gray-700 leading-relaxed flex items-start">
-                <span className="text-[#09BEFC] mr-3 mt-1 flex-shrink-0">•</span>
-                <span>{item}</span>
-              </li>
+              <li key={i} className="leading-relaxed">{item}</li>
             ))}
           </ul>
         );
-
+      
       case 'quote':
         return (
-          <blockquote key={index} className="border-l-4 border-[#09BEFC] bg-gradient-to-r from-blue-50 to-transparent pl-6 pr-6 py-6 my-8 italic text-xl text-[#06316D] leading-relaxed">
+          <blockquote key={index} className="border-l-4 border-[#09BEFC] pl-6 py-4 my-8 italic text-xl text-gray-600 bg-blue-50 rounded-r-lg">
             {section.content as string}
           </blockquote>
         );
-
+      
       case 'callout':
         return (
-          <div key={index} className="bg-gradient-to-r from-[#06316D] to-[#0a4a9e] text-white rounded-lg p-6 my-8 shadow-lg">
-            <p className="text-lg leading-relaxed font-medium">
+          <div key={index} className="bg-gradient-to-r from-[#06316D] to-[#0a4a9e] text-white p-8 rounded-lg my-8 shadow-lg">
+            <p className="text-lg font-semibold leading-relaxed">
               {section.content as string}
             </p>
           </div>
         );
-
+      
       default:
         return null;
     }
   };
 
-  const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
-  const shareTitle = post.title;
-
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-[#06316D] via-[#0a4a9e] to-[#06316D] text-white">
-        <div className="container py-16">
-          <Link href="/insights">
-            <Button variant="ghost" className="text-white hover:text-[#09BEFC] hover:bg-white/10 mb-8">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Insights
-            </Button>
+      {/* Header Navigation */}
+      <div className="bg-gray-50 border-b border-gray-200">
+        <div className="container mx-auto px-4 py-6">
+          <Link href="/insights" className="inline-flex items-center text-[#09BEFC] hover:text-[#06316D] font-semibold transition-colors">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to All Insights
           </Link>
+        </div>
+      </div>
 
-          <div className="max-w-4xl">
-            <div className="flex items-center gap-4 mb-6 flex-wrap">
-              <span className="px-4 py-1.5 bg-[#09BEFC] text-white text-sm font-semibold rounded-full">
+      {/* Article Header */}
+      <article className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Category Badge */}
+            <div className="mb-6">
+              <span className="px-4 py-2 bg-[#09BEFC] text-white text-sm font-semibold rounded-full">
                 {post.category}
               </span>
-              <div className="flex items-center gap-2 text-blue-100">
-                <Calendar className="h-4 w-4" />
-                <span className="text-sm">{post.publishDate}</span>
-              </div>
-              <div className="flex items-center gap-2 text-blue-100">
-                <Clock className="h-4 w-4" />
-                <span className="text-sm">{post.readingTime}</span>
-              </div>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            {/* Title */}
+            <h1 className="text-4xl md:text-5xl font-bold text-[#06316D] mb-4 leading-tight">
               {post.title}
             </h1>
-            
+
+            {/* Subtitle */}
             {post.subtitle && (
-              <p className="text-xl text-blue-100 mb-6 leading-relaxed">
+              <p className="text-2xl text-gray-600 mb-8 leading-relaxed">
                 {post.subtitle}
               </p>
             )}
 
-            <p className="text-blue-100 font-medium">{post.author}</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Featured Image */}
-      <div className="container -mt-8 mb-12">
-        <div className="max-w-5xl mx-auto">
-          <img
-            src={post.featuredImage}
-            alt={post.title}
-            className="w-full h-[400px] object-cover rounded-lg shadow-2xl"
-          />
-        </div>
-      </div>
-
-      {/* Article Content */}
-      <article className="container pb-20">
-        <div className="max-w-4xl mx-auto">
-          {/* Social Share */}
-          <div className="flex items-center justify-between mb-12 pb-6 border-b border-gray-200">
-            <div className="flex items-center gap-3">
-              <Share2 className="h-5 w-5 text-gray-600" />
-              <span className="text-sm font-semibold text-gray-600 uppercase tracking-wide">Share</span>
+            {/* Meta Information */}
+            <div className="flex flex-wrap items-center gap-6 mb-8 text-gray-600">
+              <div className="flex items-center gap-2">
+                <Calendar className="h-5 w-5" />
+                <span>{post.publishDate}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="h-5 w-5" />
+                <span>{post.readingTime}</span>
+              </div>
+              <div className="font-semibold text-[#06316D]">
+                {post.author}
+              </div>
             </div>
-            <div className="flex items-center gap-3">
+
+            {/* Social Share Buttons */}
+            <div className="flex items-center gap-4 mb-12 pb-8 border-b border-gray-200">
+              <span className="text-gray-600 font-semibold flex items-center gap-2">
+                <Share2 className="h-5 w-5" />
+                Share:
+              </span>
               <a
-                href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`}
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+                className="p-2 bg-[#0077B5] text-white rounded-lg hover:bg-[#006399] transition-colors"
                 aria-label="Share on LinkedIn"
               >
-                <Linkedin className="h-5 w-5 text-[#0077B5]" />
+                <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`}
+                href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareTitle}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+                className="p-2 bg-[#1DA1F2] text-white rounded-lg hover:bg-[#1a8cd8] transition-colors"
                 aria-label="Share on Twitter"
               >
-                <Twitter className="h-5 w-5 text-[#1DA1F2]" />
+                <Twitter className="h-5 w-5" />
               </a>
               <a
-                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
+                href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+                className="p-2 bg-[#1877F2] text-white rounded-lg hover:bg-[#165ed4] transition-colors"
                 aria-label="Share on Facebook"
               >
-                <Facebook className="h-5 w-5 text-[#1877F2]" />
+                <Facebook className="h-5 w-5" />
               </a>
             </div>
-          </div>
 
-          {/* Content */}
-          <div className="prose prose-lg max-w-none">
-            {post.content.map((section, index) => renderContent(section, index))}
-          </div>
+            {/* Featured Image */}
+            <div className="mb-12 rounded-lg overflow-hidden shadow-xl">
+              <img
+                src={post.featuredImage}
+                alt={post.title}
+                className="w-full h-auto"
+              />
+            </div>
 
-          {/* CTA Section */}
-          <div className="mt-16 bg-gradient-to-r from-[#06316D] to-[#0a4a9e] rounded-xl p-8 md:p-12 text-center text-white shadow-xl">
-            <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how AI can help you achieve measurable growth and competitive advantage.
-            </p>
-            <a
-              href="https://calendly.com/atlasaimarketing-info/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button size="lg" className="bg-[#09BEFC] hover:bg-white hover:text-[#06316D] text-white font-semibold px-8 py-6 text-lg">
-                Book Your 30-Minute Strategy Call
-              </Button>
-            </a>
+            {/* Article Content */}
+            <div className="prose prose-lg max-w-none">
+              {post.content.map((section, index) => renderSection(section, index))}
+            </div>
+
+            {/* Author Bio */}
+            <div className="mt-16 p-8 bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg border border-gray-200">
+              <h3 className="text-2xl font-bold text-[#06316D] mb-4">About the Author</h3>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                <strong>{post.author.replace('By ', '')}</strong> is the founder of Atlas AI Growth & Marketing Agency, 
+                specializing in AI-powered marketing strategies for logistics and transportation companies.
+              </p>
+              <a
+                href="https://calendly.com/atlasaimarketing-info/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#09BEFC] hover:bg-[#06316D] text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+              >
+                Schedule a Strategy Call
+              </a>
+            </div>
           </div>
         </div>
       </article>
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="bg-gray-50 py-20">
-          <div className="container">
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-[#06316D] mb-12 text-center">
-                Related Articles
-              </h2>
+              <h2 className="text-3xl font-bold text-[#06316D] mb-8">Related Articles</h2>
               <div className="grid md:grid-cols-3 gap-8">
                 {relatedPosts.map((relatedPost) => (
                   <Link key={relatedPost.slug} href={`/insights/${relatedPost.slug}`}>
-                    <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col group">
-                      <img
-                        src={relatedPost.featuredImage}
-                        alt={relatedPost.title}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="p-6 flex-1 flex flex-col">
-                        <div className="flex items-center gap-3 mb-3">
-                          <span className="px-3 py-1 bg-[#09BEFC]/10 text-[#06316D] text-xs font-semibold rounded-full">
-                            {relatedPost.category}
-                          </span>
-                          <span className="text-xs text-gray-500">{relatedPost.readingTime}</span>
-                        </div>
-                        <h3 className="text-xl font-bold text-[#06316D] mb-3 group-hover:text-[#09BEFC] transition-colors line-clamp-2">
+                    <article className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 h-full flex flex-col group">
+                      <div className="relative overflow-hidden h-48">
+                        <img
+                          src={relatedPost.featuredImage}
+                          alt={relatedPost.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-6 flex-1">
+                        <h3 className="text-lg font-bold text-[#06316D] mb-2 group-hover:text-[#09BEFC] transition-colors line-clamp-2">
                           {relatedPost.title}
                         </h3>
-                        <p className="text-gray-600 text-sm line-clamp-3 flex-1">
+                        <p className="text-gray-600 text-sm line-clamp-3">
                           {relatedPost.excerpt}
                         </p>
-                        <div className="mt-4 pt-4 border-t border-gray-100">
-                          <p className="text-xs text-gray-500">{relatedPost.publishDate}</p>
-                        </div>
                       </div>
-                    </div>
+                    </article>
                   </Link>
                 ))}
               </div>
@@ -244,6 +234,28 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </section>
       )}
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-[#06316D] to-[#0a4a9e]">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Marketing with AI?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+              Let's discuss how Atlas AI can help you achieve measurable growth and competitive advantage.
+            </p>
+            <a
+              href="https://calendly.com/atlasaimarketing-info/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-[#09BEFC] hover:bg-white hover:text-[#06316D] text-white font-semibold px-8 py-4 rounded-lg transition-colors"
+            >
+              Book Your 30-Minute Strategy Call
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
