@@ -88,9 +88,14 @@ export default function Insights() {
                     </div>
 
                     {/* Content */}
-                    <div className="p-6 flex-1 flex flex-col">
+                    <div className="p-5 flex-1 flex flex-col">
+                      {/* Title */}
+                      <h2 className="text-lg font-bold text-[#06316D] mb-3 group-hover:text-[#09BEFC] transition-colors line-clamp-2">
+                        {post.title}
+                      </h2>
+
                       {/* Meta Info */}
-                      <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                      <div className="flex items-center gap-4 text-sm text-gray-500 mt-auto">
                         <div className="flex items-center gap-1.5">
                           <Calendar className="h-4 w-4" />
                           <span>{post.publishDate}</span>
@@ -100,27 +105,11 @@ export default function Insights() {
                           <span>{post.readingTime}</span>
                         </div>
                       </div>
-
-                      {/* Title */}
-                      <h2 className="text-xl font-bold text-[#06316D] mb-3 group-hover:text-[#09BEFC] transition-colors line-clamp-2">
-                        {post.title}
-                      </h2>
-
-                      {/* Excerpt */}
-                      <p className="text-base text-gray-600 mb-6 line-clamp-3 flex-1">
-                        {post.excerpt}
-                      </p>
-
-                      {/* Read More Link */}
-                      <div className="flex items-center text-[#09BEFC] font-semibold group-hover:text-[#06316D] transition-colors mt-auto">
-                        <span>Read Article</span>
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </div>
                     </div>
 
                     {/* Author */}
-                    <div className="px-6 py-4 bg-gray-50 border-t border-gray-100">
-                      <p className="text-sm text-gray-600">By {post.author}</p>
+                    <div className="px-5 py-3 bg-gray-50 border-t border-gray-100">
+                      <p className="text-xs text-gray-600">By {post.author}</p>
                     </div>
                   </article>
                 </Link>

@@ -35,8 +35,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     switch (section.type) {
       case 'heading':
         const level = section.level || 2;
-        const className = `font-bold text-[#06316D] mb-4 ${
-          level === 2 ? 'text-3xl mt-12' : 'text-2xl mt-8'
+        const className = `font-bold text-[#06316D] ${
+          level === 2 ? 'text-2xl md:text-3xl mt-12 mb-6' : 'text-xl md:text-2xl mt-10 mb-5'
         }`;
         
         if (level === 2) {
@@ -49,14 +49,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       
       case 'paragraph':
         return (
-          <p key={index} className="text-lg text-gray-700 leading-relaxed mb-6">
+          <p key={index} className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
             {section.content as string}
           </p>
         );
       
       case 'list':
         return (
-          <ul key={index} className="list-disc list-inside space-y-3 mb-6 text-lg text-gray-700">
+          <ul key={index} className="list-disc list-inside space-y-3 mb-8 text-base md:text-lg text-gray-700 ml-4">
             {(section.content as string[]).map((item, i) => (
               <li key={i} className="leading-relaxed">{item}</li>
             ))}
@@ -65,15 +65,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       
       case 'quote':
         return (
-          <blockquote key={index} className="border-l-4 border-[#09BEFC] pl-6 py-4 my-8 italic text-xl text-gray-600 bg-blue-50 rounded-r-lg">
+          <blockquote key={index} className="border-l-4 border-[#09BEFC] pl-6 py-6 my-10 italic text-lg md:text-xl text-gray-600 bg-blue-50 rounded-r-lg">
             {section.content as string}
           </blockquote>
         );
       
       case 'callout':
         return (
-          <div key={index} className="bg-gradient-to-r from-[#06316D] to-[#0a4a9e] text-white p-8 rounded-lg my-8 shadow-lg">
-            <p className="text-lg font-semibold leading-relaxed">
+          <div key={index} className="bg-gradient-to-r from-[#06316D] to-[#0a4a9e] text-white p-8 rounded-lg my-10">
+            <p className="text-base md:text-lg leading-relaxed">
               {section.content as string}
             </p>
           </div>
@@ -97,30 +97,30 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       </div>
 
       {/* Article Header */}
-      <article className="py-12">
+      <article className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             {/* Category Badge */}
-            <div className="mb-6">
-              <span className="px-4 py-2 bg-[#09BEFC] text-white text-sm font-semibold rounded-full">
+            <div className="mb-8">
+              <span className="px-4 py-2 bg-[#09BEFC] text-white text-sm font-semibold rounded-full uppercase tracking-wide">
                 {post.category}
               </span>
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl md:text-5xl font-bold text-[#06316D] mb-4 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#06316D] mb-6 leading-tight">
               {post.title}
             </h1>
 
             {/* Subtitle */}
             {post.subtitle && (
-              <p className="text-2xl text-gray-600 mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed">
                 {post.subtitle}
               </p>
             )}
 
             {/* Meta Information */}
-            <div className="flex flex-wrap items-center gap-6 mb-8 text-gray-600">
+            <div className="flex flex-wrap items-center gap-6 mb-10 pb-8 border-b border-gray-200 text-gray-600">
               <div className="flex items-center gap-2">
                 <Calendar className="h-5 w-5" />
                 <span>{post.publishDate}</span>
@@ -134,8 +134,22 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
             </div>
 
+            {/* Featured Image */}
+            <div className="mb-12 rounded-lg overflow-hidden">
+              <img
+                src={post.featuredImage}
+                alt={post.title}
+                className="w-full h-auto"
+              />
+            </div>
+
+            {/* Article Content */}
+            <div className="prose prose-lg max-w-none">
+              {post.content.map((section, index) => renderSection(section, index))}
+            </div>
+
             {/* Social Share Buttons */}
-            <div className="flex items-center gap-4 mb-12 pb-8 border-b border-gray-200">
+            <div className="flex items-center gap-4 mt-16 pt-10 border-t border-gray-200">
               <span className="text-gray-600 font-semibold flex items-center gap-2">
                 <Share2 className="h-5 w-5" />
                 Share:
@@ -169,24 +183,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </a>
             </div>
 
-            {/* Featured Image */}
-            <div className="mb-12 rounded-lg overflow-hidden shadow-xl">
-              <img
-                src={post.featuredImage}
-                alt={post.title}
-                className="w-full h-auto"
-              />
-            </div>
-
-            {/* Article Content */}
-            <div className="prose prose-lg max-w-none">
-              {post.content.map((section, index) => renderSection(section, index))}
-            </div>
-
             {/* Author Bio */}
-            <div className="mt-16 p-8 bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg border border-gray-200">
-              <h3 className="text-2xl font-bold text-[#06316D] mb-4">About the Author</h3>
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            <div className="mt-16 p-8 bg-gray-50 rounded-lg">
+              <h3 className="text-xl md:text-2xl font-bold text-[#06316D] mb-4">About the Author</h3>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                 <strong>{post.author.replace('By ', '')}</strong> is the founder of Atlas AI Growth & Marketing Agency, 
                 specializing in AI-powered marketing strategies for logistics and transportation companies.
               </p>
@@ -205,10 +205,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="py-16 bg-gray-50">
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-[#06316D] mb-8">Related Articles</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#06316D] mb-10">Related Articles</h2>
               <div className="grid md:grid-cols-3 gap-8">
                 {relatedPosts.map((relatedPost) => (
                   <Link key={relatedPost.slug} href={`/insights/${relatedPost.slug}`}>
@@ -221,10 +221,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         />
                       </div>
                       <div className="p-6 flex-1">
-                        <h3 className="text-lg font-bold text-[#06316D] mb-2 group-hover:text-[#09BEFC] transition-colors line-clamp-2">
+                        <h3 className="text-lg font-bold text-[#06316D] mb-3 group-hover:text-[#09BEFC] transition-colors line-clamp-2">
                           {relatedPost.title}
                         </h3>
-                        <p className="text-gray-600 text-sm line-clamp-3">
+                        <p className="text-gray-600 line-clamp-3">
                           {relatedPost.excerpt}
                         </p>
                       </div>
@@ -238,13 +238,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       )}
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#06316D] to-[#0a4a9e]">
+      <section className="py-24 bg-gradient-to-r from-[#06316D] to-[#0a4a9e]">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center text-white">
+          <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Marketing with AI?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-blue-100 mb-10 leading-relaxed">
               Let's discuss how Atlas AI can help you achieve measurable growth and competitive advantage.
             </p>
             <a
