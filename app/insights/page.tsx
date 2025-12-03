@@ -2,6 +2,15 @@ import Link from "next/link";
 import { Clock, Calendar, ArrowRight } from "lucide-react";
 import { getAllBlogPosts } from "@/lib/blogData";
 import { Button } from "@/components/ui/button";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Insights & Thought Leadership | Atlas AI Growth & Marketing Agency",
+  description: "Explore how AI is transforming logistics, marketing, and business growth. Expert insights from Atlas AI to help you stay ahead of the curve.",
+  alternates: {
+    canonical: "https://www.atlasaimarketing.co/insights"
+  }
+};
 
 export default function Insights() {
   const blogPosts = getAllBlogPosts();
