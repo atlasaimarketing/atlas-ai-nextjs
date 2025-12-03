@@ -111,7 +111,7 @@ export default function Insights() {
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="w-full sm:flex-1 px-6 py-4 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#09BEFC]"
+                className="w-full sm:flex-1 px-6 py-4 rounded-lg text-gray-900 placeholder:text-gray-500 bg-white border-2 border-white focus:outline-none focus:ring-2 focus:ring-[#09BEFC] focus:border-[#09BEFC] shadow-lg"
               />
               <button 
                 className="w-full sm:w-auto bg-[#09BEFC] hover:bg-white hover:text-[#06316D] text-white font-semibold px-8 py-4 rounded-lg whitespace-nowrap transition-colors"
