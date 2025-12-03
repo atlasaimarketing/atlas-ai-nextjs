@@ -3,14 +3,15 @@ import { ArrowLeft, Clock, Calendar, Share2, Linkedin, Twitter, Facebook } from 
 import { getBlogPostBySlug, getRelatedPosts, type BlogSection } from "@/lib/blogData";
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getBlogPostBySlug(params.slug);
-  const relatedPosts = getRelatedPosts(params.slug, 3);
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params;
+  const post = getBlogPostBySlug(slug);
+  const relatedPosts = getRelatedPosts(slug, 3);
 
   if (!post) {
     return (
