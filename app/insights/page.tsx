@@ -35,12 +35,12 @@ export default function Insights() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {blogPosts.map((post) => (
                 <Link key={post.slug} href={`/insights/${post.slug}`}>
-                  <article className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 h-full flex flex-col group border border-gray-100">
+                  <article className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col group border border-gray-100 h-full">
                     {/* Featured Image */}
-                    <div className="relative overflow-hidden h-56">
+                    <div className="relative overflow-hidden aspect-[16/9] w-full">
                       <img
                         src={post.featuredImage}
                         alt={post.title}
@@ -68,12 +68,12 @@ export default function Insights() {
                       </div>
 
                       {/* Title */}
-                      <h2 className="text-xl font-bold text-[#06316D] mb-3 group-hover:text-[#09BEFC] transition-colors leading-tight line-clamp-2">
+                      <h2 className="text-lg md:text-xl font-bold text-[#06316D] mb-3 group-hover:text-[#09BEFC] transition-colors leading-tight line-clamp-2 min-h-[3.5rem]">
                         {post.title}
                       </h2>
 
                       {/* Excerpt */}
-                      <p className="text-gray-600 mb-4 leading-relaxed line-clamp-3 flex-1">
+                      <p className="text-sm md:text-base text-gray-600 mb-4 leading-relaxed line-clamp-3 flex-1">
                         {post.excerpt}
                       </p>
 
