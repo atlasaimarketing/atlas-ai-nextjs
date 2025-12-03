@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import Link from "next/link";
 import { Clock, Calendar, ArrowRight } from "lucide-react";
 import { getAllBlogPosts } from "@/lib/blogData";
 import { Button } from "@/components/ui/button";
