@@ -5,11 +5,7 @@ export interface BlogPost {
   title: string
   slug: { current: string }
   author: string
-  featuredImage?: {
-    asset: {
-      url: string
-    }
-  }
+  featuredImage?: string
   category: string
   publishDate: string
   readingTime: string
