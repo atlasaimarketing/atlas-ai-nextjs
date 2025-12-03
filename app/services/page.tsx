@@ -23,7 +23,8 @@ export default function Services() {
         "AI-driven brand voice development",
         "Website development and digital presence"
       ],
-      bgColor: "white"
+      bgColor: "white",
+      url: "/services/ai-powered-brand-systems"
     },
     {
       title: "AI-Driven Marketing & Growth",
@@ -36,7 +37,8 @@ export default function Services() {
         "Lead generation systems",
         "Analytics, reporting, and optimization"
       ],
-      bgColor: "#f9f9f9"
+      bgColor: "#f9f9f9",
+      url: "/services/ai-driven-marketing-growth"
     },
     {
       title: "Thought Leadership & Media Influence",
@@ -49,7 +51,8 @@ export default function Services() {
         "Media relations and PR placement",
         "Speaking opportunities and podcast bookings"
       ],
-      bgColor: "white"
+      bgColor: "white",
+      url: "/services/thought-leadership-media"
     },
     {
       title: "AI Integration & Automation",
@@ -63,6 +66,7 @@ export default function Services() {
         "AI bots and intelligent agents"
       ],
       bgColor: "#f9f9f9",
+      url: "/services/ai-integration-automation",
       subsection: {
         title: "AI Bots & Intelligent Agents",
         description: "Custom-built voice and chat agents for recruiting, insurance, and sales. Our intelligent agents handle customer inquiries, qualify leads, schedule appointments, and provide 24/7 support, all while learning and improving over time."
@@ -79,7 +83,8 @@ export default function Services() {
         "Growth strategy and roadmap creation",
         "Budget optimization and ROI tracking"
       ],
-      bgColor: "white"
+      bgColor: "white",
+      url: "/services/fractional-cmo-growth-leadership"
     },
     {
       title: "Team Training & AI Enablement",
@@ -92,7 +97,8 @@ export default function Services() {
         "Live enablement and ongoing support",
         "AI tool selection and implementation guidance"
       ],
-      bgColor: "#f9f9f9"
+      bgColor: "#f9f9f9",
+      url: "/services/team-training-ai-enablement"
     }
   ];
 
@@ -163,6 +169,25 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
+
+                {/* Learn More Button */}
+                <Link 
+                  href={service.url}
+                  style={{
+                    display: "inline-block",
+                    marginTop: "1.5rem",
+                    backgroundColor: "#00BFFF",
+                    color: "white",
+                    padding: "0.875rem 2rem",
+                    borderRadius: "8px",
+                    textDecoration: "none",
+                    fontWeight: 600,
+                    fontSize: "1rem",
+                    transition: "background-color 0.3s"
+                  }}
+                >
+                  Learn More →
+                </Link>
 
                 {/* Subsection for AI Integration */}
                 {service.subsection && (
