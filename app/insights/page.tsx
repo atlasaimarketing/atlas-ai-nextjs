@@ -20,10 +20,10 @@ export default function Insights() {
       <section className="relative bg-gradient-to-br from-[#06316D] via-[#0a4a9e] to-[#06316D] text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 px-2">
               Insights & Thought Leadership
             </h1>
-            <p className="text-xl text-blue-100 leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-blue-100 leading-relaxed px-4 max-w-3xl mx-auto">
               Explore how AI is transforming logistics, marketing, and business growth. 
               Expert insights from Atlas AI to help you stay ahead of the curve.
             </p>
