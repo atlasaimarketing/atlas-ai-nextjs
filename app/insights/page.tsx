@@ -100,10 +100,10 @@ export default function Insights() {
       <section className="bg-gradient-to-r from-[#06316D] to-[#0a4a9e] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 px-2">
               Stay Ahead with AI Insights
             </h2>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-blue-100 mb-8 leading-relaxed px-4">
               Get the latest strategies, case studies, and actionable insights delivered to your inbox. 
               Join logistics leaders who are transforming their businesses with AI.
             </p>
@@ -130,10 +130,10 @@ export default function Insights() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#06316D] mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#06316D] mb-6 px-2">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed px-4">
               Let's discuss how AI can help you achieve measurable growth and competitive advantage.
             </p>
             <a
