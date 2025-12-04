@@ -3,8 +3,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "Thought Leadership & Media Influence | Atlas AI Growth & Marketing Agency",
+  title: "Thought Leadership Marketing & Media Placement | Atlas AI",
   description: "Turn your expertise into industry influence. Strategic thought leadership programs, media placement, speaking opportunities, and content that positions you as the go-to authority.",
+  keywords: "thought leadership marketing, executive branding, media placement, industry authority, logistics thought leadership",
   alternates: {
     canonical: "https://www.atlasaimarketing.co/services/thought-leadership-media"
   }
@@ -234,6 +235,32 @@ export default function ThoughtLeadershipPage() {
               <Link href="/services/fractional-cmo-growth-leadership" style={{ color: "#0ea5e9", textDecoration: "underline" }}>
                 Fractional CMO & Growth Leadership
               </Link> - Strategic guidance for scaling your influence
+            </li>
+          </ul>
+
+
+          {/* Related Blog Posts */}
+          <h2 style={{ fontSize: "1.75rem", fontWeight: "bold", marginTop: "3rem", marginBottom: "1.5rem", color: "#1e3a8a" }}>
+            Related Insights
+          </h2>
+          <p style={{ fontSize: "1.125rem", lineHeight: 1.8, marginBottom: "1rem", color: "#374151" }}>
+            Learn more about AI marketing strategies and logistics industry trends:
+          </p>
+          <ul style={{ fontSize: "1.125rem", lineHeight: 1.8, marginBottom: "2rem", color: "#374151", paddingLeft: "1.5rem" }}>
+            <li style={{ marginBottom: "0.5rem" }}>
+              <Link href="/insights" style={{ color: "#0ea5e9", textDecoration: "underline" }}>
+                View All Insights
+              </Link> - Explore our latest articles on AI marketing and growth
+            </li>
+            <li style={{ marginBottom: "0.5rem" }}>
+              <Link href="/press" style={{ color: "#0ea5e9", textDecoration: "underline" }}>
+                Press & Media
+              </Link> - See our thought leadership and industry recognition
+            </li>
+            <li style={{ marginBottom: "0.5rem" }}>
+              <Link href="/faq" style={{ color: "#0ea5e9", textDecoration: "underline" }}>
+                FAQ
+              </Link> - Get answers to common questions about our services
             </li>
           </ul>
 

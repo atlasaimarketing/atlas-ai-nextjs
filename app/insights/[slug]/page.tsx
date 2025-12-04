@@ -235,6 +235,52 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </article>
 
+      {/* Related Articles Section */}
+      <section className="py-12 bg-gray-50 border-t border-gray-200">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              Continue Reading
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <Link
+                href="/insights"
+                className="group bg-white hover:bg-[#06316D] border border-gray-200 hover:border-[#06316D] p-5 rounded-lg transition-all"
+              >
+                <h4 className="text-base font-bold text-gray-900 group-hover:text-white mb-2">
+                  View All Insights
+                </h4>
+                <p className="text-gray-600 group-hover:text-blue-100 text-sm">
+                  Explore more articles on AI marketing, logistics, and growth strategies.
+                </p>
+              </Link>
+              <Link
+                href="/about"
+                className="group bg-white hover:bg-[#06316D] border border-gray-200 hover:border-[#06316D] p-5 rounded-lg transition-all"
+              >
+                <h4 className="text-base font-bold text-gray-900 group-hover:text-white mb-2">
+                  About Atlas AI
+                </h4>
+                <p className="text-gray-600 group-hover:text-blue-100 text-sm">
+                  Learn about our team, mission, and industry expertise.
+                </p>
+              </Link>
+              <Link
+                href="/faq"
+                className="group bg-white hover:bg-[#06316D] border border-gray-200 hover:border-[#06316D] p-5 rounded-lg transition-all"
+              >
+                <h4 className="text-base font-bold text-gray-900 group-hover:text-white mb-2">
+                  FAQ
+                </h4>
+                <p className="text-gray-600 group-hover:text-blue-100 text-sm">
+                  Get answers to common questions about working with us.
+                </p>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Related Services Section */}
       <section className="py-16 bg-white border-t border-gray-200">
         <div className="container mx-auto px-4">

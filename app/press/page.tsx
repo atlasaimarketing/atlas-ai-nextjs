@@ -258,7 +258,7 @@ export default function Press() {
               Press & Media
             </h1>
             <p className="text-xl md:text-2xl font-light text-blue-100 max-w-4xl mx-auto leading-relaxed">
-              Recognized thought leader in AI-powered marketing, logistics innovation, and diversity in transportation. Featured in Forbes, FreightWaves, and honored as 2025 Top Woman to Watch in Transportation.
+              Recognized thought leader in AI-powered marketing, logistics innovation, and diversity in transportation. Featured in Forbes, FreightWaves, and honored as 2025 Top Woman to Watch in Transportation. <Link href="/about" className="underline hover:text-white">Learn more about our founder</Link>.
             </p>
           </div>
         </div>
@@ -645,7 +645,7 @@ export default function Press() {
             </h2>
             <p className="text-xl font-light text-blue-100 mb-10 leading-relaxed">
               Interested in featuring Kameel Gaines for an interview, podcast,
-              or speaking engagement? We'd love to hear from you.
+              or speaking engagement? We'd love to hear from you. Explore our <Link href="/services" className="underline hover:text-white">services</Link> or read our <Link href="/insights" className="underline hover:text-white">latest insights</Link>.
             </p>
             <Link
               href="/contact"

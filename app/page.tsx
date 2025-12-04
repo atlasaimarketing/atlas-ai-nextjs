@@ -22,7 +22,7 @@ export default function Home() {
             Where Industry Expertise Meets AI Innovation
           </h1>
           <p style={{ fontSize: "clamp(1rem, 2.5vw, 1.25rem)", opacity: 0.9, maxWidth: "900px", margin: "0 auto 3rem" }}>
-            <strong>Atlas AI Growth & Marketing Agency</strong> helps logistics and service-based businesses grow through AI-powered branding, marketing, and automation systems.
+            <strong>Atlas AI Growth & Marketing Agency</strong> helps logistics and service-based businesses grow through AI-powered branding, marketing, and automation systems. See our <Link href="/case-studies" style={{ color: "#00BFFF", textDecoration: "underline" }}>proven results</Link>.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <Link 
@@ -84,7 +84,7 @@ export default function Home() {
               What We Do
             </h2>
             <p style={{ fontSize: "1.125rem", color: "#666" }}>
-              Comprehensive AI-powered solutions for modern logistics and service businesses
+              Comprehensive AI-powered solutions for modern logistics and service businesses. <Link href="/faq" style={{ color: "#007BFF", textDecoration: "none", fontWeight: "600" }}>Have questions?</Link>
             </p>
           </div>
 
@@ -330,6 +330,13 @@ export default function Home() {
               alt="Forbes Business Council" 
               width={120} 
               height={120}
+              style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
+            />
+            <Image 
+              src="/assets/trust-logos/freightwaves.png" 
+              alt="FreightWaves" 
+              width={140} 
+              height={60}
               style={{ objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7, transition: "all 0.3s" }}
             />
             <Image 

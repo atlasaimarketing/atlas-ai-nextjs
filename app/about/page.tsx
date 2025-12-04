@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "About | Atlas AI Growth & Marketing Agency",
@@ -30,9 +31,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function About() {
+export default function AboutPage() {
   return (
-    <main style={{ padding: "6rem 2rem", minHeight: "60vh" }}>
+    <main>
+      <Breadcrumb items={[
+        { label: "Home", href: "/" },
+        { label: "About", href: "/about" }
+      ]} />yle={{ padding: "6rem 2rem", minHeight: "60vh" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <h1 style={{ fontSize: "3rem", fontWeight: "bold", color: "#001F54", marginBottom: "2rem" }}>
           About Atlas AI Growth & Marketing Agency
@@ -62,7 +67,7 @@ export default function About() {
           </ul>
           
           <p style={{ marginBottom: "1.5rem" }}>
-            We build with purpose, using AI as the engine and strategy as the driver.
+            We build with purpose, using AI as the engine and strategy as the driver. Explore our <Link href="/insights" style={{ color: "#007BFF", textDecoration: "none", fontWeight: "600" }}>insights and resources</Link> to learn more about AI-powered marketing.
           </p>
 
           <h2 style={{ fontSize: "2rem", fontWeight: "bold", color: "#001F54", marginTop: "3rem", marginBottom: "1.5rem" }}>
@@ -106,7 +111,7 @@ export default function About() {
           </ul>
           
           <p style={{ marginBottom: "1.5rem" }}>
-            These spaces require accuracy, compliance awareness, strong branding, and high trust. Our systems are built with those real-world demands in mind.
+            These spaces require accuracy, compliance awareness, strong branding, and high trust. Our systems are built with those real-world demands in mind. Learn more about our <Link href="/case-studies" style={{ color: "#007BFF", textDecoration: "none", fontWeight: "600" }}>proven results</Link> working with logistics companies.
           </p>
 
           <h2 style={{ fontSize: "2rem", fontWeight: "bold", color: "#001F54", marginTop: "3rem", marginBottom: "1.5rem" }}>
@@ -234,6 +239,37 @@ export default function About() {
             >
               Home
             </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Founder Authority & Recognition */}
+      <div style={{ padding: "4rem 2rem", backgroundColor: "#f8f9fa", textAlign: "center" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <h2 style={{ fontSize: "2rem", fontWeight: "bold", color: "#001F54", marginBottom: "1rem" }}>
+            Recognized by Leading Industry Organizations
+          </h2>
+          <p style={{ fontSize: "1.125rem", color: "#666", marginBottom: "3rem", maxWidth: "800px", margin: "0 auto 3rem" }}>
+            Kameel E. Gaines is trusted by top logistics and business organizations worldwide.
+          </p>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+            gap: "2rem",
+            alignItems: "center",
+            justifyItems: "center"
+          }}>
+            <img src="/assets/trust-logos/forbes-business-council.png" alt="Forbes Business Council" style={{ width: "120px", height: "auto", objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7 }} />
+            <img src="/assets/trust-logos/freightwaves.png" alt="FreightWaves" style={{ width: "140px", height: "auto", objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7 }} />
+            <img src="/assets/trust-logos/women-in-trucking.png" alt="Women In Trucking Association" style={{ width: "120px", height: "auto", objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7 }} />
+            <img src="/assets/trust-logos/aawta.jpg" alt="African American Women Trucking Association" style={{ width: "100px", height: "auto", objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7 }} />
+            <img src="/assets/trust-logos/tmsa.jpg" alt="TMSA" style={{ width: "120px", height: "auto", objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7 }} />
+            <img src="/assets/trust-logos/modex-2024.jpg" alt="MODEX 2024" style={{ width: "140px", height: "auto", objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7 }} />
+            <img src="/assets/trust-logos/motive-vision.png" alt="Motive Vision Conference" style={{ width: "120px", height: "auto", objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7 }} />
+            <img src="/assets/trust-logos/manifest.jpg" alt="Manifest Conference" style={{ width: "100px", height: "auto", objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7 }} />
+            <img src="/assets/trust-logos/wreaths-across-america-radio.jpg" alt="Wreaths Across America Radio" style={{ width: "120px", height: "auto", objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7 }} />
+            <img src="/assets/trust-logos/hd-screening-lab.jpg" alt="HD Screening Lab" style={{ width: "100px", height: "auto", objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7 }} />
+            <img src="/assets/trust-logos/atg-recruit.jpg" alt="ATG Solutions" style={{ width: "100px", height: "auto", objectFit: "contain", filter: "grayscale(100%)", opacity: 0.7 }} />
           </div>
         </div>
       </div>

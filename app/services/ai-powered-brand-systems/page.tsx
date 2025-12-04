@@ -4,8 +4,9 @@ import Link from "next/link";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "AI-Powered Brand Systems | Atlas AI Growth & Marketing Agency",
-  description: "Transform your logistics brand with AI-powered brand systems. From identity design to AI-driven brand voice and visual frameworks that scale with your business.",
+  title: "AI Brand Development & Systems | Atlas AI Marketing Agency",
+  description: "Transform your logistics brand with AI brand development and intelligent brand systems. From identity design to AI-driven brand voice and visual frameworks that scale with your business.",
+  keywords: "AI brand development, brand systems, AI branding, logistics branding, brand identity design, AI brand voice",
   alternates: {
     canonical: "https://www.atlasaimarketing.co/services/ai-powered-brand-systems"
   }
@@ -228,6 +229,32 @@ export default function AIBrandSystemsPage() {
               <Link href="/services/ai-integration-automation" style={{ color: "#0ea5e9", textDecoration: "underline" }}>
                 AI Integration & Automation
               </Link> - Connect your business systems seamlessly
+            </li>
+          </ul>
+
+
+          {/* Related Blog Posts */}
+          <h2 style={{ fontSize: "1.75rem", fontWeight: "bold", marginTop: "3rem", marginBottom: "1.5rem", color: "#1e3a8a" }}>
+            Related Insights
+          </h2>
+          <p style={{ fontSize: "1.125rem", lineHeight: 1.8, marginBottom: "1rem", color: "#374151" }}>
+            Learn more about AI marketing strategies and logistics industry trends:
+          </p>
+          <ul style={{ fontSize: "1.125rem", lineHeight: 1.8, marginBottom: "2rem", color: "#374151", paddingLeft: "1.5rem" }}>
+            <li style={{ marginBottom: "0.5rem" }}>
+              <Link href="/insights" style={{ color: "#0ea5e9", textDecoration: "underline" }}>
+                View All Insights
+              </Link> - Explore our latest articles on AI marketing and growth
+            </li>
+            <li style={{ marginBottom: "0.5rem" }}>
+              <Link href="/press" style={{ color: "#0ea5e9", textDecoration: "underline" }}>
+                Press & Media
+              </Link> - See our thought leadership and industry recognition
+            </li>
+            <li style={{ marginBottom: "0.5rem" }}>
+              <Link href="/faq" style={{ color: "#0ea5e9", textDecoration: "underline" }}>
+                FAQ
+              </Link> - Get answers to common questions about our services
             </li>
           </ul>
 
