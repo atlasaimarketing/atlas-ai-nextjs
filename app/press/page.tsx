@@ -590,6 +590,7 @@ export default function PressPage() {
             <Link
               href="/contact"
               className="inline-block bg-white text-[#1e3a8a] px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+              style={{ color: "#1e3a8a" }}
             >
               Get in Touch
             </Link>

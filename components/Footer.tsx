@@ -42,6 +42,7 @@ export default function Footer() {
             <Link href="/services" style={{ color: "#00BFFF", textDecoration: "none" }}>Services</Link>
             <Link href="/about" style={{ color: "#00BFFF", textDecoration: "none" }}>About</Link>
             <Link href="/insights" style={{ color: "#00BFFF", textDecoration: "none" }}>Insights</Link>
+            <Link href="/press" style={{ color: "#00BFFF", textDecoration: "none" }}>Press</Link>
             <Link href="/qa" style={{ color: "#00BFFF", textDecoration: "none" }}>Q&A</Link>
             <Link href="/contact" style={{ color: "#00BFFF", textDecoration: "none" }}>Contact</Link>
             <Link href="/privacy" style={{ color: "#00BFFF", textDecoration: "none" }}>Privacy</Link>

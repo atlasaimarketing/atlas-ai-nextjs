@@ -41,6 +41,7 @@ export default function Navigation() {
           <Link href="/services" style={{ color: "#003366", textDecoration: "none", fontWeight: 500 }}>Services</Link>
           <Link href="/about" style={{ color: "#003366", textDecoration: "none", fontWeight: 500 }}>About</Link>
           <Link href="/insights" style={{ color: "#003366", textDecoration: "none", fontWeight: 500 }}>Insights</Link>
+          <Link href="/press" style={{ color: "#003366", textDecoration: "none", fontWeight: 500 }}>Press</Link>
           <Link href="/qa" style={{ color: "#003366", textDecoration: "none", fontWeight: 500 }}>Q&A</Link>
           <Link 
             href="https://calendly.com/atlasaimarketing-info/30min" 
@@ -96,6 +97,7 @@ export default function Navigation() {
             <Link href="/services" style={{ color: "#003366", textDecoration: "none", padding: "0.5rem" }}>Services</Link>
             <Link href="/about" style={{ color: "#003366", textDecoration: "none", padding: "0.5rem" }}>About</Link>
             <Link href="/insights" style={{ color: "#003366", textDecoration: "none", padding: "0.5rem" }}>Insights</Link>
+            <Link href="/press" style={{ color: "#003366", textDecoration: "none", padding: "0.5rem" }}>Press</Link>
             <Link href="/qa" style={{ color: "#003366", textDecoration: "none", padding: "0.5rem" }}>Q&A</Link>
             <Link href="https://calendly.com/atlasaimarketing-info/30min" target="_blank" rel="noopener noreferrer" style={{ color: "#00BFFF", textDecoration: "none", padding: "0.5rem", fontWeight: 600 }}>Get Started</Link>
           </div>
