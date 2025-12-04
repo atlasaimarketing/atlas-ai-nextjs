@@ -162,7 +162,7 @@ export default function Press() {
       />
 
       {/* Hero Section - Refined Deloitte Style */}
-      <section className="relative bg-gradient-to-r from-[#003d5c] to-[#00567a] text-white py-24">
+      <section className="relative bg-[#003366] text-white py-24">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-light mb-6 tracking-tight">
@@ -548,7 +548,7 @@ export default function Press() {
       </section>
 
       {/* CTA Section - Refined */}
-      <section className="py-20 bg-gradient-to-r from-[#003d5c] to-[#00567a] text-white">
+      <section className="py-20 bg-[#003366] text-white">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-light mb-6 tracking-tight">
