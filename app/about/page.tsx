@@ -37,7 +37,9 @@ export default function AboutPage() {
       <Breadcrumb items={[
         { label: "Home", href: "/" },
         { label: "About", href: "/about" }
-      ]} />yle={{ padding: "6rem 2rem", minHeight: "60vh" }}>
+      ]} />
+      
+      <div style={{ padding: "6rem 2rem", minHeight: "60vh" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <h1 style={{ fontSize: "3rem", fontWeight: "bold", color: "#001F54", marginBottom: "2rem" }}>
           About Atlas AI Growth & Marketing Agency
