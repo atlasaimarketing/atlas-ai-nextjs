@@ -445,6 +445,40 @@ export default function PressPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      Mid-America Trucking Show (MATS) 2025
+                    </h3>
+                    <p className="text-lg text-[#1e3a8a] font-semibold mb-3">
+                      Panelist - Women's Leadership in Trucking Panel
+                    </p>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      <strong>First women's leadership panel in MATS' 55-year history.</strong> Moderated by Nicole C. Ward (AAWTA founder), this groundbreaking Pro Talks session brought together influential leaders to discuss key challenges and opportunities shaping the future of women in trucking, exploring strategic solutions for recruitment, retention, critical industry needs, and safety advocacy initiatives.
+                    </p>
+                    <div className="flex items-center gap-4 text-sm text-gray-600">
+                      <span>March 2025</span>
+                      <span>•</span>
+                      <span>African American Women Trucking Association</span>
+                    </div>
+                    <Link
+                      href="https://youtu.be/7CsOF0g8uhI"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mt-4 text-[#1e3a8a] font-semibold hover:underline"
+                    >
+                      Watch Full Panel (49 min) →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-all">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-[#1e3a8a] rounded-lg flex items-center justify-center">
+                      <Mic className="w-8 h-8 text-white" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
                       Women in Trucking Accelerate! Conference 2024
                     </h3>
                     <p className="text-lg text-[#1e3a8a] font-semibold mb-3">
