@@ -124,6 +124,15 @@ const mediaFeatures = [
 
 const podcasts = [
   {
+    show: "Transfix - Supply Chain Decoded",
+    episode: "Women's History Month: Kameel Gaines",
+    number: "Episode 12",
+    date: "March 2024",
+    description:
+      "Special Women's History Month episode discussing career journey, breaking barriers in trucking, founding Rig on Wheels, and empowering women in the supply chain industry.",
+    link: "https://transfix.io/podcast/supply-chain-decoded-episode12-kameel-gaines-whm",
+  },
+  {
     show: "Let's Talk Supply Chain",
     episode: "Women In Supply Chain™, Kameel Gaines",
     number: "Episode 429",
