@@ -48,11 +48,37 @@ export default function AIBrandSystemsPage() {
     }))
   };
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "AI-Powered Brand Systems",
+    "provider": {
+      "@type": "Organization",
+      "name": "Atlas AI Growth & Marketing Agency",
+      "url": "https://www.atlasaimarketing.co"
+    },
+    "areaServed": "US",
+    "description": "Transform your logistics brand with AI-powered brand systems. From identity design to AI-driven brand voice and visual frameworks that scale with your business.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.atlasaimarketing.co/services/ai-powered-brand-systems"
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Logistics and Transportation Companies"
+    }
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       
       <div className="min-h-screen">

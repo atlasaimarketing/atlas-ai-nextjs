@@ -4,6 +4,27 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About | Atlas AI Growth & Marketing Agency",
   description: "Learn about Atlas AI Growth & Marketing Agency - AI-powered marketing solutions for logistics and service-based businesses. Led by Kameel E. Gaines, Chief AI Marketing Strategist.",
+  keywords: "Atlas AI, Kameel Gaines, AI marketing agency, logistics marketing, transportation marketing, Forbes Business Council",
+  openGraph: {
+    title: "About Atlas AI Growth & Marketing Agency",
+    description: "AI-powered marketing solutions for logistics and service-based businesses. Led by Kameel E. Gaines, Forbes Business Council Member and 2025 Top Woman to Watch in Transportation.",
+    url: "https://www.atlasaimarketing.co/about",
+    type: "website",
+    images: [
+      {
+        url: "https://www.atlasaimarketing.co/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Atlas AI Growth & Marketing Agency"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Atlas AI Growth & Marketing Agency",
+    description: "AI-powered marketing solutions for logistics and service-based businesses.",
+    images: ["https://www.atlasaimarketing.co/og-image.jpg"]
+  },
   alternates: {
     canonical: 'https://www.atlasaimarketing.co/about',
   },

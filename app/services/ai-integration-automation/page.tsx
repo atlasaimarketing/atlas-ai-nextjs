@@ -47,11 +47,37 @@ export default function AIIntegrationPage() {
     }))
   };
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "AI Integration & Automation",
+    "provider": {
+      "@type": "Organization",
+      "name": "Atlas AI Growth & Marketing Agency",
+      "url": "https://www.atlasaimarketing.co"
+    },
+    "areaServed": "US",
+    "description": "Connect your business systems seamlessly with AI-powered integrations and workflow automation. Eliminate manual tasks and unlock operational efficiency.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.atlasaimarketing.co/services/ai-integration-automation"
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Logistics and Transportation Companies"
+    }
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       
       <div className="min-h-screen">

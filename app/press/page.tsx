@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     url: "https://www.atlasaimarketing.co/press",
     type: "website",
   },
+  alternates: {
+    canonical: "https://www.atlasaimarketing.co/press",
+  },
 };
 
 const awards = [
@@ -150,6 +153,82 @@ const podcasts = [
 ];
 
 export default function Press() {
+  // Video Schema for MATS 2025 Panel
+  const videoSchema = {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Women's Leadership in Trucking Panel - MATS 2025",
+    "description": "First women's leadership panel in MATS' 55-year history. Moderated by Nicole C. Ward (AAWTA founder), this groundbreaking Pro Talks session brought together influential leaders to discuss key challenges and opportunities shaping the future of women in trucking.",
+    "thumbnailUrl": "https://www.atlasaimarketing.co/og-image.jpg",
+    "uploadDate": "2025-03-01",
+    "duration": "PT49M",
+    "contentUrl": "https://youtu.be/7CsOF0g8uhI",
+    "embedUrl": "https://www.youtube.com/embed/7CsOF0g8uhI"
+  };
+
+  // Event Schema for Speaking Engagements
+  const eventSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "Event",
+        "name": "Mid-America Trucking Show (MATS) 2025 - Women's Leadership Panel",
+        "description": "First women's leadership panel in MATS' 55-year history discussing key challenges and opportunities shaping the future of women in trucking.",
+        "startDate": "2025-03",
+        "location": {
+          "@type": "Place",
+          "name": "Mid-America Trucking Show",
+          "address": "Louisville, KY"
+        },
+        "performer": {
+          "@type": "Person",
+          "name": "Kameel Gaines"
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "African American Women Trucking Association"
+        }
+      },
+      {
+        "@type": "Event",
+        "name": "Women in Trucking Accelerate! Conference 2024",
+        "description": "Strategies for Success in Recruitment and Leadership - HERstory Series",
+        "startDate": "2024-11",
+        "location": {
+          "@type": "Place",
+          "name": "Women in Trucking Accelerate Conference"
+        },
+        "performer": {
+          "@type": "Person",
+          "name": "Kameel Gaines"
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Women in Trucking Association"
+        }
+      },
+      {
+        "@type": "Event",
+        "name": "TMSA ELEVATE 2024 Conference",
+        "description": "People, Profit, and Purpose: Unifying Your Workforce for Business Impact",
+        "startDate": "2024-06",
+        "location": {
+          "@type": "Place",
+          "name": "TMSA ELEVATE Conference"
+        },
+        "performer": {
+          "@type": "Person",
+          "name": "Kameel Gaines"
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Transportation Marketing & Sales Association"
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <PersonSchema />
@@ -159,6 +238,16 @@ export default function Press() {
           { name: "Home", url: "https://www.atlasaimarketing.co" },
           { name: "Press & Media", url: "https://www.atlasaimarketing.co/press" },
         ]}
+      />
+      {/* Video Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+      />
+      {/* Event Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
       />
 
       {/* Hero Section - Refined Deloitte Style */}

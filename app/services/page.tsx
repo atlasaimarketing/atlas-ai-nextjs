@@ -5,6 +5,27 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Services | Atlas AI Growth & Marketing Agency",
   description: "Explore AI-powered marketing services from Atlas AI Growth & Marketing Agency. Branding, automation, thought leadership, and AI integration for logistics companies.",
+  keywords: "AI marketing services, logistics marketing, brand systems, marketing automation, thought leadership, fractional CMO, AI integration",
+  openGraph: {
+    title: "Services | Atlas AI Growth & Marketing Agency",
+    description: "AI-powered marketing services for logistics companies: Brand systems, marketing automation, thought leadership, fractional CMO, and AI integration.",
+    url: "https://www.atlasaimarketing.co/services",
+    type: "website",
+    images: [
+      {
+        url: "https://www.atlasaimarketing.co/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Atlas AI Services"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services | Atlas AI Growth & Marketing Agency",
+    description: "AI-powered marketing services for logistics companies.",
+    images: ["https://www.atlasaimarketing.co/og-image.jpg"]
+  },
   alternates: {
     canonical: 'https://www.atlasaimarketing.co/services',
   },

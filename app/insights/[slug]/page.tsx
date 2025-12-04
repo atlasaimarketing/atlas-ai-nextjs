@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Metadata } from "next";
 import { ArrowLeft, Clock, Calendar, Share2, Linkedin, Twitter, Facebook } from "lucide-react";
 import { getBlogPostBySlug, getAllBlogPosts } from "@/sanity/lib/queries";
 import { PortableText } from '@portabletext/react';
@@ -14,6 +15,43 @@ export async function generateStaticParams() {
   return posts.map((post) => ({
     slug: post.slug.current,
   }));
+}
+
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getBlogPostBySlug(slug);
+
+  if (!post) {
+    return {
+      title: "Blog Post Not Found | Atlas AI",
+    };
+  }
+
+  const url = `https://www.atlasaimarketing.co/insights/${post.slug.current}`;
+
+  return {
+    title: `${post.title} | Atlas AI Growth & Marketing Agency`,
+    description: post.excerpt || post.subtitle || post.title,
+    keywords: `${post.category}, AI marketing, logistics marketing, trucking industry, ${post.author}`,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt || post.subtitle || post.title,
+      url: url,
+      type: "article",
+      publishedTime: post.publishDate,
+      authors: [post.author],
+      images: post.featuredImage ? [post.featuredImage] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt || post.subtitle || post.title,
+      images: post.featuredImage ? [post.featuredImage] : [],
+    },
+    alternates: {
+      canonical: url,
+    },
+  };
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
@@ -38,8 +76,45 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const shareUrl = `https://www.atlasaimarketing.co/insights/${post.slug.current}`;
   const shareTitle = encodeURIComponent(post.title);
 
+  // Article Schema JSON-LD
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.title,
+    "description": post.excerpt || post.subtitle || post.title,
+    "image": post.featuredImage || "https://www.atlasaimarketing.co/og-image.jpg",
+    "datePublished": post.publishDate,
+    "dateModified": post.publishDate,
+    "author": {
+      "@type": "Person",
+      "name": post.author,
+      "url": "https://www.atlasaimarketing.co/about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Atlas AI Growth & Marketing Agency",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.atlasaimarketing.co/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://www.atlasaimarketing.co/insights/${post.slug.current}`
+    },
+    "articleSection": post.category,
+    "keywords": `${post.category}, AI marketing, logistics marketing, trucking industry`,
+    "wordCount": post.content ? JSON.stringify(post.content).length / 5 : 0,
+    "inLanguage": "en-US"
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Article Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       {/* Hero Section with Featured Image and Overlay */}
       <section className="relative w-full h-[600px] md:h-[700px]">
         {/* Featured Image Background */}
@@ -159,6 +234,71 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </div>
       </article>
+
+      {/* Related Services Section */}
+      <section className="py-16 bg-white border-t border-gray-200">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">
+              Explore Our Services
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Link
+                href="/services/ai-driven-marketing-growth"
+                className="group bg-gray-50 hover:bg-[#06316D] border border-gray-200 hover:border-[#06316D] p-6 rounded-lg transition-all"
+              >
+                <h4 className="text-lg font-bold text-gray-900 group-hover:text-white mb-2">
+                  AI-Driven Marketing & Growth
+                </h4>
+                <p className="text-gray-600 group-hover:text-blue-100 text-sm">
+                  Data-backed marketing ecosystems that convert using automation, analytics, and creative strategy.
+                </p>
+              </Link>
+              <Link
+                href="/services/thought-leadership-media"
+                className="group bg-gray-50 hover:bg-[#06316D] border border-gray-200 hover:border-[#06316D] p-6 rounded-lg transition-all"
+              >
+                <h4 className="text-lg font-bold text-gray-900 group-hover:text-white mb-2">
+                  Thought Leadership & Media
+                </h4>
+                <p className="text-gray-600 group-hover:text-blue-100 text-sm">
+                  Position your executives as industry authorities through strategic content and media placements.
+                </p>
+              </Link>
+              <Link
+                href="/services/ai-integration-automation"
+                className="group bg-gray-50 hover:bg-[#06316D] border border-gray-200 hover:border-[#06316D] p-6 rounded-lg transition-all"
+              >
+                <h4 className="text-lg font-bold text-gray-900 group-hover:text-white mb-2">
+                  AI Integration & Automation
+                </h4>
+                <p className="text-gray-600 group-hover:text-blue-100 text-sm">
+                  Connect your business systems seamlessly with AI-powered integrations and workflow automation.
+                </p>
+              </Link>
+              <Link
+                href="/services/fractional-cmo-growth-leadership"
+                className="group bg-gray-50 hover:bg-[#06316D] border border-gray-200 hover:border-[#06316D] p-6 rounded-lg transition-all"
+              >
+                <h4 className="text-lg font-bold text-gray-900 group-hover:text-white mb-2">
+                  Fractional CMO & Growth Leadership
+                </h4>
+                <p className="text-gray-600 group-hover:text-blue-100 text-sm">
+                  Executive-level marketing leadership without the full-time cost.
+                </p>
+              </Link>
+            </div>
+            <div className="mt-8 text-center">
+              <Link
+                href="/services"
+                className="inline-block bg-[#09BEFC] hover:bg-[#06316D] text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+              >
+                View All Services →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Share Section */}
       <section className="bg-gray-50 py-16 border-t border-gray-200">

@@ -47,11 +47,37 @@ export default function ThoughtLeadershipPage() {
     }))
   };
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Thought Leadership & Media Influence",
+    "provider": {
+      "@type": "Organization",
+      "name": "Atlas AI Growth & Marketing Agency",
+      "url": "https://www.atlasaimarketing.co"
+    },
+    "areaServed": "US",
+    "description": "Turn your expertise into industry influence. Strategic thought leadership programs, media placement, speaking opportunities, and content that positions you as the go-to authority.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.atlasaimarketing.co/services/thought-leadership-media"
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Logistics and Transportation Companies"
+    }
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       
       <div className="min-h-screen">
