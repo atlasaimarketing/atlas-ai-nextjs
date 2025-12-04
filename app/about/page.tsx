@@ -120,6 +120,56 @@ export default function About() {
           </p>
 
           <h2 style={{ fontSize: "2rem", fontWeight: "bold", color: "#001F54", marginTop: "3rem", marginBottom: "1.5rem" }}>
+            Media & Recognition
+          </h2>
+          
+          <p style={{ marginBottom: "1.5rem" }}>
+            Kameel E. Gaines is a recognized thought leader in AI marketing, logistics innovation, and diversity in transportation. Her expertise and insights have been featured in leading industry publications and platforms.
+          </p>
+
+          <div style={{ backgroundColor: "#f9fafb", padding: "2rem", borderRadius: "8px", marginBottom: "2rem" }}>
+            <h3 style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#001F54", marginBottom: "1rem" }}>
+              Awards & Honors
+            </h3>
+            <ul style={{ marginBottom: "1.5rem", paddingLeft: "2rem" }}>
+              <li style={{ marginBottom: "0.75rem" }}>
+                <strong>2025 Top Women to Watch in Transportation</strong> – Women in Trucking Association
+              </li>
+              <li style={{ marginBottom: "0.75rem" }}>
+                <strong>Forbes Business Council Member</strong> – Exclusive invitation-only community for successful business leaders (2023-Present)
+              </li>
+              <li style={{ marginBottom: "0.75rem" }}>
+                <strong>Former Co-Chairwoman</strong> – African American Women's Trucking Association
+              </li>
+            </ul>
+
+            <h3 style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#001F54", marginBottom: "1rem", marginTop: "2rem" }}>
+              Featured In
+            </h3>
+            <ul style={{ marginBottom: "0", paddingLeft: "2rem" }}>
+              <li style={{ marginBottom: "0.75rem" }}>
+                <strong>Forbes</strong> – Published 10+ thought leadership articles on AI marketing, logistics innovation, and workforce development
+              </li>
+              <li style={{ marginBottom: "0.75rem" }}>
+                <strong>FreightWaves</strong> – Featured in multiple articles and "Taking the Hire Road" video series
+              </li>
+              <li style={{ marginBottom: "0.75rem" }}>
+                <strong>Let's Talk Supply Chain Podcast</strong> – Women in Supply Chain™ episode featuring career journey and industry insights
+              </li>
+              <li style={{ marginBottom: "0.75rem" }}>
+                <strong>The Inside Lane</strong> – Industry voice feature on female leadership transforming trucking
+              </li>
+              <li style={{ marginBottom: "0.75rem" }}>
+                <strong>National Transportation Institute</strong> – Featured interview on driver recruiting and retention strategies
+              </li>
+            </ul>
+          </div>
+
+          <p style={{ marginBottom: "1.5rem" }}>
+            <Link href="/press" style={{ color: "#007BFF", textDecoration: "none", fontWeight: "600" }}>View full press coverage and media appearances →</Link>
+          </p>
+
+          <h2 style={{ fontSize: "2rem", fontWeight: "bold", color: "#001F54", marginTop: "3rem", marginBottom: "1.5rem" }}>
             Continue Exploring Atlas AI
           </h2>
           

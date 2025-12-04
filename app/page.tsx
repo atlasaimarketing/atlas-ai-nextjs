@@ -2,10 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { PersonSchema, OrganizationSchema } from "./components/SchemaMarkup";
 
 export default function Home() {
   return (
     <main>
+      <PersonSchema />
+      <OrganizationSchema />
       {/* Hero Section */}
       <section style={{
         paddingTop: "8rem",
@@ -53,6 +56,22 @@ export default function Home() {
             >
               Learn More
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* As Featured In */}
+      <section style={{ padding: "3rem 2rem", backgroundColor: "#f9fafb", borderTop: "1px solid #e5e7eb", borderBottom: "1px solid #e5e7eb" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <p style={{ textAlign: "center", fontSize: "0.875rem", fontWeight: 600, color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "2rem" }}>
+            As Featured In
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: "3rem" }}>
+            <Link href="https://www.forbes.com/councils/forbesbusinesscouncil/people/kameelgaines/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "#9ca3af", fontWeight: "bold", fontSize: "1.125rem", transition: "color 0.3s" }}>Forbes</Link>
+            <Link href="https://www.freightwaves.com/news/rig-on-wheels-celebrates-15-years-of-driver-recruitment" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "#9ca3af", fontWeight: "bold", fontSize: "1.125rem", transition: "color 0.3s" }}>FreightWaves</Link>
+            <Link href="https://www.womenintrucking.org/press-releases/women-in-trucking-association-names-2025-top-women-to-watch-in-transportation" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "#9ca3af", fontWeight: "bold", fontSize: "1.125rem", transition: "color 0.3s" }}>Women in Trucking</Link>
+            <Link href="https://letstalksupplychain.com/episode-429-women-in-supply-chain-kameel-gaines/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "#9ca3af", fontWeight: "bold", fontSize: "1.125rem", transition: "color 0.3s" }}>Let's Talk Supply Chain</Link>
+            <Link href="/press" style={{ textDecoration: "none", color: "#1e3a8a", fontWeight: "bold", fontSize: "1.125rem" }}>View All →</Link>
           </div>
         </div>
       </section>
