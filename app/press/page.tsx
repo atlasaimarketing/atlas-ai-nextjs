@@ -561,7 +561,7 @@ export default function Press() {
             <Link
               href="/contact"
               className="inline-block bg-white px-10 py-4 rounded-sm font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
-              style={{ color: "#00BFFF" }}
+              style={{ color: "#003366" }}
             >
               Get in Touch
             </Link>
