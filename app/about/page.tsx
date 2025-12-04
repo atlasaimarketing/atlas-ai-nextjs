@@ -244,6 +244,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+      </div>
 
       {/* Founder Authority & Recognition */}
       <div style={{ padding: "4rem 2rem", backgroundColor: "#f8f9fa", textAlign: "center" }}>
