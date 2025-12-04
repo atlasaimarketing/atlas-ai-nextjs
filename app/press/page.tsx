@@ -560,7 +560,8 @@ export default function Press() {
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-white text-[#003d5c] px-10 py-4 rounded-sm font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+              className="inline-block bg-white px-10 py-4 rounded-sm font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+              style={{ color: "#00BFFF" }}
             >
               Get in Touch
             </Link>
