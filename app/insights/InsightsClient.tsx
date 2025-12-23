@@ -72,7 +72,7 @@ export default function InsightsClient() {
 
       {/* Category Filter */}
       <section className="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
-        <div className="container mx-auto px-4">
+        <div className="w-full flex justify-center px-4">
           <div className="max-w-7xl mx-auto">
             <div className="flex gap-2 overflow-x-auto py-6 scrollbar-hide">
               {categories.map((category) => (
@@ -107,7 +107,7 @@ export default function InsightsClient() {
           {/* Featured Post Section */}
           {featuredPost && (
             <section className="py-16 md:py-24 bg-gray-50">
-              <div className="container mx-auto px-4">
+              <div className="w-full flex justify-center px-4">
                 <div className="max-w-7xl mx-auto">
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-12">Featured Article</h2>
                   <Link href={`/insights/${featuredPost.slug.current}`} className="group">
@@ -177,7 +177,7 @@ export default function InsightsClient() {
           {/* Recent Posts Grid */}
           {recentPosts.length > 0 && (
             <section className="py-16 md:py-24">
-              <div className="container mx-auto px-4">
+              <div className="w-full flex justify-center px-4">
                 <div className="max-w-7xl mx-auto">
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-12">Recent Articles</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
