@@ -247,8 +247,8 @@ export default function InsightsClient() {
 
       {/* Newsletter CTA Section */}
       <section className="bg-gradient-to-r from-[#06316D] to-[#0a4a9e] py-20 md:py-28">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center text-white">
+        <div className="w-full">
+          <div className="max-w-3xl mx-auto text-center text-white px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Stay Ahead with AI Insights
             </h2>
@@ -263,8 +263,8 @@ export default function InsightsClient() {
 
       {/* Final CTA Section */}
       <section className="bg-white py-20 md:py-28 border-t border-gray-200">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <div className="w-full">
+          <div className="max-w-4xl mx-auto text-center px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Ready to Transform Your Business?
             </h2>
