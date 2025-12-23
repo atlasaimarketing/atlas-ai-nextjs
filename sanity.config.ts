@@ -9,6 +9,8 @@ export default defineConfig({
   
   projectId: 'yg2mmobl',
   dataset: 'production',
+    basePath: '/studio',
+
   
   plugins: [structureTool(), visionTool()],
   
