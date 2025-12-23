@@ -262,7 +262,7 @@ export default function InsightsClient() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="bg-white py-20 md:py-28 border-t border-gray-200">
+      <section className="bg-white py-20 md:py-28 border-t border-gray-200 mt-12">
         <div className="w-full flex justify-center">
           <div className="max-w-4xl text-center px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
