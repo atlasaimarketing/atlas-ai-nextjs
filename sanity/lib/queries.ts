@@ -8,7 +8,7 @@ export interface BlogPost {
   featuredImage?: string
   category: string
   publishDate: string
-  readingTime: string
+  readingTime?: string
   excerpt: string
   subtitle?: string
   content: any[]
@@ -16,39 +16,48 @@ export interface BlogPost {
 }
 
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
-  const query = `*[_type == "post" && published == true] | order(publishDate desc) {
+  const query = `*[_type == "post" && published == true && defined(slug.current)] | order(publishedAt desc) {
     _id,
     title,
     slug,
     author,
-    "featuredImage": featuredImage,
+    "featuredImage": featuredImage.asset->url,
     category,
-    publishDate,
-    readingTime,
+    "publishDate": publishedAt,
+    "readingTime": "5 min read",
     excerpt,
-    subtitle,
     content,
     published
   }`
 
-  return client.fetch(query)
+  try {
+    const posts = await client.fetch(query)
+    return posts || []
+  } catch (error) {
+    console.error('Error fetching blog posts:', error)
+    return []
+  }
 }
 
 export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
-  const query = `*[_type == "post" && slug.current == $slug][0] {
+  const query = `*[_type == "post" && slug.current == $slug && defined(slug.current)][0] {
     _id,
     title,
     slug,
     author,
-    "featuredImage": featuredImage,
+    "featuredImage": featuredImage.asset->url,
     category,
-    publishDate,
-    readingTime,
+    "publishDate": publishedAt,
+    "readingTime": "5 min read",
     excerpt,
-    subtitle,
     content,
     published
   }`
 
-  return client.fetch(query, { slug })
+  try {
+    return await client.fetch(query, { slug })
+  } catch (error) {
+    console.error('Error fetching blog post:', error)
+    return null
+  }
 }
