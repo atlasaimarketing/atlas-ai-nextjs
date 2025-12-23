@@ -57,8 +57,8 @@ export default function InsightsClient() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#06316D] via-[#0a4a9e] to-[#06316D] text-white py-20 md:py-28">
-        <div className="w-full">
-          <div className="max-w-4xl mx-auto text-center px-4">
+        <div className="w-full flex justify-center">
+          <div className="max-w-4xl text-center px-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-center">
               Insights & Thought Leadership
             </h1>
@@ -247,8 +247,8 @@ export default function InsightsClient() {
 
       {/* Newsletter CTA Section */}
       <section className="bg-gradient-to-r from-[#06316D] to-[#0a4a9e] py-20 md:py-28">
-        <div className="w-full">
-          <div className="max-w-3xl mx-auto text-center text-white px-4">
+        <div className="w-full flex justify-center">
+          <div className="max-w-3xl text-center text-white px-4">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Stay Ahead with AI Insights
             </h2>
@@ -263,8 +263,8 @@ export default function InsightsClient() {
 
       {/* Final CTA Section */}
       <section className="bg-white py-20 md:py-28 border-t border-gray-200">
-        <div className="w-full">
-          <div className="max-w-4xl mx-auto text-center px-4">
+        <div className="w-full flex justify-center">
+          <div className="max-w-4xl text-center px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Ready to Transform Your Business?
             </h2>
