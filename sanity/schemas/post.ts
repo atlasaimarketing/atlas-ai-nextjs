@@ -53,9 +53,11 @@ export default defineType({
       options: {
         list: [
           { title: 'Marketing Leadership', value: 'Marketing Leadership' },
-          { title: 'AI & Technology', value: 'AI & Technology' },
-          { title: 'Business Strategy', value: 'Business Strategy' },
-          { title: 'Industry Insights', value: 'Industry Insights' },
+          { title: 'Case Studies', value: 'Case Studies' },
+          { title: 'AI Marketing', value: 'AI Marketing' },
+          { title: 'Culture & Retention', value: 'Culture & Retention' },
+          { title: 'Workforce Management', value: 'Workforce Management' },
+          { title: 'Brand Strategy', value: 'Brand Strategy' },
         ],
       },
     }),
