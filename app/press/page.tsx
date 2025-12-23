@@ -252,7 +252,7 @@ export default function Press() {
 
       {/* Hero Section - Refined Deloitte Style */}
       <section className="relative bg-[#003366] text-white py-24">
-        <div className="container mx-auto px-6 max-w-5xl">
+        <div className="w-full flex justify-center"><div className="max-w-5xl px-6">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-light mb-6 tracking-tight">
               Press & Media
@@ -262,11 +262,12 @@ export default function Press() {
             </p>
           </div>
         </div>
+          </div>
       </section>
 
       {/* As Featured In - Premium Logo Section */}
       <section className="py-16 bg-gray-50 border-y border-gray-200">
-        <div className="container mx-auto px-6">
+        <div className="w-full flex justify-center"><div className="px-6">
           <p className="text-center text-sm font-semibold text-gray-500 uppercase tracking-wider mb-10">
             As Featured In
           </p>
@@ -278,11 +279,12 @@ export default function Press() {
             <div className="text-2xl font-semibold text-gray-600">NTI</div>
           </div>
         </div>
+          </div>
       </section>
 
       {/* Awards & Recognition - Refined Cards */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-6 max-w-6xl">
+        <div className="w-full flex justify-center"><div className="max-w-6xl px-6">
           <div className="mb-16">
             <h2 className="text-4xl font-light text-gray-900 mb-4 tracking-tight">
               Awards & Recognition
@@ -326,11 +328,12 @@ export default function Press() {
             ))}
           </div>
         </div>
+          </div>
       </section>
 
       {/* Forbes Section - Elevated Design */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6 max-w-6xl">
+        <div className="w-full flex justify-center"><div className="max-w-6xl px-6">
           <div className="flex items-center gap-4 mb-12">
             <BookOpen className="w-10 h-10 text-[#003d5c]" />
             <h2 className="text-4xl font-light text-gray-900 tracking-tight">
@@ -387,11 +390,12 @@ export default function Press() {
             </Link>
           </div>
         </div>
+          </div>
       </section>
 
       {/* Media Features - Clean Grid */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-6 max-w-6xl">
+        <div className="w-full flex justify-center"><div className="max-w-6xl px-6">
           <div className="flex items-center gap-4 mb-12">
             <Newspaper className="w-10 h-10 text-[#003d5c]" />
             <h2 className="text-4xl font-light text-gray-900 tracking-tight">
@@ -434,11 +438,12 @@ export default function Press() {
             ))}
           </div>
         </div>
+          </div>
       </section>
 
       {/* Podcast Appearances */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6 max-w-6xl">
+        <div className="w-full flex justify-center"><div className="max-w-6xl px-6">
           <div className="flex items-center gap-4 mb-12">
             <Mic className="w-10 h-10 text-[#003d5c]" />
             <h2 className="text-4xl font-light text-gray-900 tracking-tight">
@@ -480,11 +485,12 @@ export default function Press() {
             ))}
           </div>
         </div>
+          </div>
       </section>
 
       {/* Speaking Engagements */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-6 max-w-6xl">
+        <div className="w-full flex justify-center"><div className="max-w-6xl px-6">
           <div className="mb-12">
             <h2 className="text-4xl font-light text-gray-900 mb-4 tracking-tight">
               Speaking Engagements
@@ -634,11 +640,12 @@ export default function Press() {
             </div>
           </div>
         </div>
+          </div>
       </section>
 
       {/* CTA Section - Refined */}
       <section className="py-20 bg-[#003366] text-white">
-        <div className="container mx-auto px-6">
+        <div className="w-full flex justify-center"><div className="px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl font-light mb-6 tracking-tight">
               Media Inquiries & Speaking Requests
@@ -656,6 +663,7 @@ export default function Press() {
             </Link>
           </div>
         </div>
+          </div>
       </section>
     </div>
   );
