@@ -53,47 +53,25 @@ export default defineType({
       options: {
         list: [
           { title: 'Marketing Leadership', value: 'Marketing Leadership' },
-          { title: 'Culture & Retention', value: 'Culture & Retention' },
-          { title: 'Case Studies', value: 'Case Studies' },
-          { title: 'AI Strategy', value: 'AI Strategy' },
-          { title: 'Business Strategy', value: 'Business Strategy' },
           { title: 'AI & Technology', value: 'AI & Technology' },
+          { title: 'Business Strategy', value: 'Business Strategy' },
+          { title: 'Industry Insights', value: 'Industry Insights' },
         ],
       },
     }),
     defineField({
-      name: 'publishDate',
-      title: 'Publish Date',
-      type: 'date',
-      validation: (Rule) => Rule.required(),
-    }),
-    defineField({
-      name: 'readingTime',
-      title: 'Reading Time',
-      type: 'string',
-      description: 'Auto-calculated or manually entered (e.g., "11 min read")',
-      placeholder: 'e.g., 11 min read',
-    }),
-    defineField({
       name: 'excerpt',
-      title: 'Excerpt / TL;DR',
+      title: 'Excerpt',
       type: 'text',
-      description: 'Short summary that appears on listing pages and in search results (1-2 sentences)',
+      description: 'Short summary (150-160 characters) - used for SEO and previews',
       rows: 3,
-      validation: (Rule) => Rule.max(200).required(),
-    }),
-    defineField({
-      name: 'subtitle',
-      title: 'Subtitle',
-      type: 'text',
-      description: 'Optional subtitle that appears below the main title',
-      rows: 2,
+      validation: (Rule) => Rule.max(160),
     }),
     defineField({
       name: 'content',
       title: 'Content',
       type: 'array',
-      description: 'The main article content - write from practitioner experience, not theory',
+      description: 'The main blog post content',
       of: [
         {
           type: 'block',
@@ -103,50 +81,21 @@ export default defineType({
             { title: 'H3', value: 'h3' },
             { title: 'Quote', value: 'blockquote' },
           ],
-          lists: [
-            { title: 'Bullet', value: 'bullet' },
-            { title: 'Numbered', value: 'number' }
-          ],
           marks: {
             decorators: [
               { title: 'Strong', value: 'strong' },
               { title: 'Emphasis', value: 'em' },
-              { title: 'Code', value: 'code' },
             ],
             annotations: [
               {
                 name: 'link',
                 type: 'object',
-                title: 'External Link',
+                title: 'Link',
                 fields: [
                   {
                     name: 'href',
                     type: 'url',
                     title: 'URL',
-                    validation: (Rule) =>
-                      Rule.uri({
-                        scheme: ['http', 'https', 'mailto', 'tel'],
-                      } ),
-                  },
-                  {
-                    name: 'blank',
-                    type: 'boolean',
-                    title: 'Open in new tab',
-                    initialValue: true,
-                  },
-                ],
-              },
-              {
-                name: 'internalLink',
-                type: 'object',
-                title: 'Internal Link',
-                description: 'Link to another blog post or page on the Atlas AI website',
-                fields: [
-                  {
-                    name: 'reference',
-                    type: 'reference',
-                    title: 'Reference',
-                    to: [{ type: 'post' }],
                   },
                 ],
               },
@@ -161,7 +110,6 @@ export default defineType({
               name: 'alt',
               type: 'string',
               title: 'Alternative text',
-              description: 'Important for SEO and accessibility',
             },
             {
               name: 'caption',
@@ -173,24 +121,10 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'ctaText',
-      title: 'Call-to-Action Text',
-      type: 'string',
-      description: 'Optional custom CTA text (defaults to standard CTA if not provided)',
-      placeholder: 'e.g., "Ready to transform your marketing strategy? Let\'s talk."',
-    }),
-    defineField({
-      name: 'ctaPosition',
-      title: 'CTA Position',
-      type: 'string',
-      description: 'Where to place the CTA in the article',
-      options: {
-        list: [
-          { title: 'Mid-article (after 50% of content)', value: 'mid' },
-          { title: 'End of article', value: 'end' },
-        ],
-      },
-      initialValue: 'end',
+      name: 'publishedAt',
+      title: 'Published Date',
+      type: 'datetime',
+      initialValue: () => new Date().toISOString(),
     }),
     defineField({
       name: 'seoKeywords',
@@ -201,13 +135,6 @@ export default defineType({
       options: {
         layout: 'tags',
       },
-    }),
-    defineField({
-      name: 'internalNotes',
-      title: 'Internal Notes',
-      type: 'text',
-      description: 'Private notes about this article (not displayed publicly)',
-      rows: 3,
     }),
     defineField({
       name: 'published',
