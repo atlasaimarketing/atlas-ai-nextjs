@@ -59,10 +59,10 @@ export default function InsightsClient() {
       <section className="relative bg-gradient-to-br from-[#06316D] via-[#0a4a9e] to-[#06316D] text-white py-20 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-center">
               Insights & Thought Leadership
             </h1>
-            <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed text-center">
               Explore how AI is transforming logistics, marketing, and business growth. 
               Expert insights from Atlas AI Growth & Marketing Agency to help you stay ahead of the curve.
             </p>
